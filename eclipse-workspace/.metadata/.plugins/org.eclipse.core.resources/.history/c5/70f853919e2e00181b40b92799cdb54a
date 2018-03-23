@@ -1,0 +1,39 @@
+<form name="fillsignStudyprogram">
+  <script cam-script type="text/form-script">
+    camForm.on('form-loaded', function() {
+      camForm.variableManager.fetchVariable('signedByStudentStudyProgram');
+	  camForm.variableManager.fetchVariable('signedBySupervisorStudyProgram');
+    });
+    camForm.on('variables-restored', function() {
+      $scope.signedByStudentStudyProgram = camForm.variableManager.variableValue('signedByStudentStudyProgram');
+	  $scope.signedBySupervisorStudyProgram = camForm.variableManager.variableValue('signedBySupervisorStudyProgram');
+    });
+  </script>
+
+
+  <h2>Summary</h2>
+
+  <table>
+
+    <tr>
+      <td>Student:</td>
+      <td>{{ signedByStudentStudyProgram }}</td>
+    </tr>
+
+    <tr>
+      <td>Supervisor:</td>
+      <td>{{ signedBySupervisorStudyProgram }}</td>
+    </tr>
+
+    
+  </table>
+
+
+  <div class="form-group">
+    <label for="StudyProgramApproved">Study program approved</label>
+    <input class="form-control"
+           cam-variable-type="Integer"
+           cam-variable-name="StudyProgramApproved"
+           name ="StudyProgramApproved" />
+  </div>
+</form>

@@ -1,0 +1,9 @@
+<form name="fillsignStudyprogram">
+  <div class="form-group">
+    <label for="StudyProgramApproved">Study program approved</label>
+    <input class="form-control"
+           cam-variable-type="Integer"
+           cam-variable-name="StudyProgramApproved"
+           name ="StudyProgramApproved" />
+  </div>
+</form>

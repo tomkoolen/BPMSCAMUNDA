@@ -47,6 +47,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\s124182\eclipse-workspace"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
