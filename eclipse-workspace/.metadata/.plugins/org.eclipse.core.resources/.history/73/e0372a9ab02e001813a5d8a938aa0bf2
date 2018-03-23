@@ -1,0 +1,9 @@
+<form name="fill-sign-graduationplan">
+  <div class="form-group">
+    <label for="fill-sign-graduationplan">Fill Sign Graduation Plan</label>
+    <input class="form-control"
+           cam-variable-type="Boolean"
+           cam-variable-name="signedByStudentGraduationPlan"
+           name ="signedByStudentGraduationPlan" />
+  </div>
+</form>

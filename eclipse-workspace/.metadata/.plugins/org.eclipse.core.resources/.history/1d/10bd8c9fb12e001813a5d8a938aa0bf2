@@ -1,0 +1,31 @@
+<form name="check-assessmentcommittee">
+  <script cam-script type="text/form-script">
+    camForm.on('form-loaded', function() {
+      camForm.variableManager.fetchVariable('signedBySupervisorAssessmentCommittee');
+    });
+    camForm.on('variables-restored', function() {
+      $scope.signedBySupervisorAssessmentCommittee = camForm.variableManager.variableValue('signedBySupervisorAssessmentCommittee');
+    });
+  </script>
+
+  <h2>Summary</h2>
+
+  <table>
+
+    <tr>
+      <td>Supervisor:</td>
+      <td>{{ signedBySupervisorAssessmentCommittee }}</td>
+    </tr>
+
+    
+  </table>
+
+
+  <div class="form-group">
+    <label for="check-assessmentcommittee">Check Assessment Committee</label>
+    <input class="form-control"
+           cam-variable-type="Integer"
+           cam-variable-name="assessmentCommitteeApproved"
+           name ="assessmentCommitteeApproved" />
+  </div>
+</form>
