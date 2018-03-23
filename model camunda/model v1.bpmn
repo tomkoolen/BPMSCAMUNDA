@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="1.11.3">
-  <bpmn:process id="Process_1" name="Study program approved" isExecutable="true">
+  <bpmn:process id="bis_administration" name="BIS administration" isExecutable="true">
     <bpmn:startEvent id="StartEvent_1" name="start BIS master">
       <bpmn:outgoing>SequenceFlow_1puwzph</bpmn:outgoing>
     </bpmn:startEvent>
@@ -141,7 +141,7 @@
   </bpmn:process>
   <bpmn:message id="Message_0d92oba" />
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
-    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="bis_administration">
       <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
         <dc:Bounds x="78" y="113" width="36" height="36" />
         <bpmndi:BPMNLabel>
@@ -239,7 +239,7 @@
       <bpmndi:BPMNShape id="ExclusiveGateway_0i16p5q_di" bpmnElement="ExclusiveGateway_0i16p5q" isMarkerVisible="true">
         <dc:Bounds x="1185.3368176538909" y="-82" width="50" height="50" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1141" y="-129" width="72" height="24" />
+          <dc:Bounds x="1138" y="-117" width="72" height="24" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="SequenceFlow_0rwb0k5_di" bpmnElement="SequenceFlow_0rwb0k5">
