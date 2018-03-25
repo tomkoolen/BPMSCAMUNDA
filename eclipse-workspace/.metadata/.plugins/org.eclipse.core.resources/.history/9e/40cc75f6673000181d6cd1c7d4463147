@@ -1,0 +1,38 @@
+<form name="check-graduationplan">
+  <script cam-script type="text/form-script">
+    camForm.on('form-loaded', function() {
+      camForm.variableManager.fetchVariable('signedByStudentGraduationPlan');
+	  camForm.variableManager.fetchVariable('signedBySupervisorGraduationPlan');
+    });
+    camForm.on('variables-restored', function() {
+      $scope.signedByStudentGraduationPlan = camForm.variableManager.variableValue('signedByStudentGraduationPlan');
+	  $scope.signedBySupervisorGraduationPlan = camForm.variableManager.variableValue('signedBySupervisorGraduationPlan');
+    });
+  </script>
+
+  <h2>Summary</h2>
+
+  <table>
+
+    <tr>
+      <td>Student:</td>
+      <td>{{ signedByStudentGraduationPlan }}</td>
+    </tr>
+
+    <tr>
+      <td>Supervisor:</td>
+      <td>{{ signedBySupervisorGraduationPlan }}</td>
+    </tr>
+
+    
+  </table>
+
+
+  <div class="form-group">
+    <label for="check-graduationplan">Check Graduation Plan</label>
+    <input class="form-control"
+           cam-variable-type="Boolean"
+           cam-variable-name="graduationPlanApproved"
+           name ="graduationPlanApproved" />
+  </div>
+</form>

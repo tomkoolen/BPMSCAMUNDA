@@ -1,6 +1,7 @@
 #!/bin/sh
 
 export CATALINA_HOME="$(dirname "$0")/server/apache-tomcat-8.0.47"
+export MAIL_CONFIG="%CATALINA_HOME%\conf"
 
 BROWSERS="gnome-www-browser x-www-browser firefox chromium chromium-browser google-chrome"
 
