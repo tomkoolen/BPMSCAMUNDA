@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;fill-sign-assessment.html&apos; to &apos;forms&apos;&#x0D;&#x0A;- Original project: &apos;loan-approval&apos;&#x0D;&#x0A;- Destination element: &apos;forms&apos;&#x0D;&#x0A;- Original element: &apos;fill-sign-assessment.html&apos;" description="Copy file" element1="src/main/webapp/forms/fill-sign-assessment.html" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1522068486504" target="/loan-approval/src/main/webapp/forms" units="0" version="1.0"/>
+</session>

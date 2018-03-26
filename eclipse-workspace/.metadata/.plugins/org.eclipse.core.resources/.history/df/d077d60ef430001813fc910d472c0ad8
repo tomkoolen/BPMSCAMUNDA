@@ -1,0 +1,9 @@
+<form name="fill-sign-assessment">
+  <div class="form-group">
+    <label for="fill-sign-assessment">Fill Sign Assessment</label>
+    <input class="form-control"
+           cam-variable-type="Boolean"
+           cam-variable-name="signedBySupervisorAssessment"
+           name ="signedBySupervisorAssessment" />
+  </div>
+</form>
