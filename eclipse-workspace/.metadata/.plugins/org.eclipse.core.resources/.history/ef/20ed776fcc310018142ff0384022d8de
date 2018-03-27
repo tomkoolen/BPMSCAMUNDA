@@ -1,0 +1,313 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>MSCassesmentform</title>
+</head>
+
+<body>
+	<form role="form" name="fill-sign-assessment">
+		<h2>Master Thesis Assessment Form</h2>
+		<div class="row">
+			<div class="col-xs-6">
+				<!-- Name -->
+				<div class="form-group">
+					<label for="inputName">Name</label>
+					<div class="controls">
+						<input class="form-control" required type="text"
+							cam-variable-type="String" cam-variable-name="studentName" disabled />
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="col-xs-6">
+				<!-- Course code -->
+				<div class="form-group">
+					<label for="inputName">Course Code</label>
+					<div class="controls">
+						<input class="form-control" required type="text"
+							cam-variable-name="courseCode" cam-variable-type="String"
+							placeholder="2IMC00" disabled />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<!-- StudentNumber -->
+			<div class="form-group">
+				<label for="inputName">Student ID</label>
+				<div class="controls">
+					<input class="form-control" required type="text"
+						cam-variable-type="String" cam-variable-name="studentId" disabled />
+				</div>
+			</div>
+			<br>
+			<!-- Master Program-->
+			<div class="form-group">
+				<label for="inputName">Master Program</label>
+				<div class="controls">
+					<input class="form-control" required type="text"
+						cam-variable-type="String" cam-variable-name="masterProgram" placeholder = "BIS" disabled />
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-xs-6">
+				<!-- Supervisor -->
+				<div class="form-group">
+					<label for="inputName">Graduation Supervisor</label>
+					<div class="controls">
+						<input class="form-control" type="text" cam-variable-type="String"
+							placeholder="Name" cam-variable-name="graduationSupervisor" disabled />
+					</div>
+				</div>
+
+				<!-- committee members -->
+				<div class="form-group">
+					<label for="inputName">Committee member</label>
+					<div class="controls">
+						<input class="form-control" type="text" cam-variable-type="String"
+							cam-variable-name="tutorAdditionalMember" disabled />
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="inputName">Committee member</label>
+					<div class="controls">
+						<input class="form-control" type="text" cam-variable-type="String"
+							cam-variable-name="votingMember" disabled />
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="inputName">Committee member</label>
+					<div class="controls">
+						<input class="form-control" type="text" cam-variable-type="String"
+							cam-variable-name="advisorMember" disabled />
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="col-xs-6">
+				<!-- Supervisor section -->
+				<div class="form-group">
+					<label for="inputName">Section</label>
+					<div class="controls">
+						<input class="form-control" type="text" cam-variable-type="String"
+							cam-variable-name="supervisorSection" disabled />
+					</div>
+				</div>
+				<br>
+				<!-- Tutor section -->
+				<div class="form-group">
+					<label for="inputName">Section</label>
+					<div class="controls">
+						<input class="form-control" type="text" cam-variable-type="String"
+							cam-variable-name="departmentTutorAdditionalMember" disabled />
+					</div>
+				</div>
+				<!-- Voting Member section -->
+				<div class="form-group">
+					<label for="inputName">Section</label>
+					<div class="controls">
+						<input class="form-control" type="text" cam-variable-type="String"
+							value="{{departmentVotingMember}}" disabled />
+					</div>
+				</div>
+			</div>
+			<hr>
+		</div>
+		<div class="row">
+
+			<div class="form-group">
+
+				<!-- assesment  -->
+				<b>Assesment</b><br>
+
+				<style type="text/css">
+.tg {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.tg td {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	padding: 10px 5px;
+	border-style: solid;
+	border-width: 1px;
+	overflow: hidden;
+	word-break: normal;
+	border-color: black;
+}
+
+.tg th {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	padding: 10px 5px;
+	border-style: solid;
+	border-width: 1px;
+	overflow: hidden;
+	word-break: normal;
+	border-color: black;
+}
+
+.tg .tg-nvd3 {
+	font-weight: bold;
+	border-color: #ffffff;
+	vertical-align: top
+}
+
+.tg .tg-7wxi {
+	border-color: #ffffff;
+	vertical-align: top
+}
+</style>
+				<table class="tg">
+					<tr>
+						<th class="tg-nvd3"></th>
+						<th class="tg-nvd3">U</th>
+						<th class="tg-nvd3">S</th>
+						<th class="tg-nvd3">G</th>
+						<th class="tg-nvd3">VG</th>
+						<th class="tg-nvd3">E</th>
+					</tr>
+					<tr>
+						<td class="tg-7wxi">Results</td>
+						<td class="tg-7wxi"><label class="radio-inline"> <input
+								type="radio" name="results" value="unsatisfactory">
+						</label></td>
+						<td class="tg-7wxi"><label class="radio-inline"> <input
+								type="radio" name="results" value="satisfactory">
+						</label></td>
+						<td class="tg-7wxi"><label class="radio-inline"> <input
+								type="radio" name="results" value="good">
+						</label></td>
+						<td class="tg-7wxi"><label class="radio-inline"> <input
+								type="radio" name="results" value="verygood">
+						</label></td>
+						<td class="tg-7wxi"><label class="radio-inline"> <input
+								type="radio" name="results" value="excellent">
+						</label></td>
+					</tr>
+					<tr>
+						<td class="tg-7wxi">Report</td>
+						<td class="tg-7wxi"><label class="radio-inline"> <input
+								type="radio" name="report" value="unsatisfactory">
+						</label></td>
+						<td class="tg-7wxi"><label class="radio-inline"> <input
+								type="radio" name="report" value="satisfactory">
+						</label></td>
+						<td class="tg-7wxi"><label class="radio-inline"> <input
+								type="radio" name="report" value="good">
+						</label></td>
+						<td class="tg-7wxi"><label class="radio-inline"> <input
+								type="radio" name="report" value="verygood">
+						</label></td>
+						<td class="tg-7wxi"><label class="radio-inline"> <input
+								type="radio" name="report" value="excellent">
+						</label></td>
+					</tr>
+					<tr>
+						<td class="tg-7wxi">Presentation</td>
+						<td class="tg-7wxi"><label class="radio-inline"> <input
+								type="radio" name="presentation" value="unsatisfactory">
+						</label></td>
+						<td class="tg-7wxi"><label class="radio-inline"> <input
+								type="radio" name="presentation" value="satisfactory">
+						</label></td>
+						<td class="tg-7wxi"><label class="radio-inline"> <input
+								type="radio" name="presentation" value="good">
+						</label></td>
+						<td class="tg-7wxi"><label class="radio-inline"> <input
+								type="radio" name="presentation" value="verygood">
+						</label></td>
+						<td class="tg-7wxi"><label class="radio-inline"> <input
+								type="radio" name="presentation" value="excellent">
+						</label></td>
+					</tr>
+					<tr>
+						<td class="tg-7wxi">Defense</td>
+						<td class="tg-7wxi"><label class="radio-inline"> <input
+								type="radio" name="defense" value="unsatisfactory">
+						</label></td>
+						<td class="tg-7wxi"><label class="radio-inline"> <input
+								type="radio" name="defense" value="satisfactory">
+						</label></td>
+						<td class="tg-7wxi"><label class="radio-inline"> <input
+								type="radio" name="defense" value="good">
+						</label></td>
+						<td class="tg-7wxi"><label class="radio-inline"> <input
+								type="radio" name="defense" value="verygood">
+						</label></td>
+						<td class="tg-7wxi"><label class="radio-inline"> <input
+								type="radio" name="defense" value="excellent">
+						</label></td>
+					</tr>
+					<tr>
+						<td class="tg-7wxi">Execution</td>
+						<td class="tg-7wxi"><label class="radio-inline"> <input
+								type="radio" name="execution" value="unsatisfactory">
+						</label></td>
+						<td class="tg-7wxi"><label class="radio-inline"> <input
+								type="radio" name="execution" value="satisfactory">
+						</label></td>
+						<td class="tg-7wxi"><label class="radio-inline"> <input
+								type="radio" name="execution" value="good">
+						</label></td>
+						<td class="tg-7wxi"><label class="radio-inline"> <input
+								type="radio" name="execution" value="verygood">
+						</label></td>
+						<td class="tg-7wxi"><label class="radio-inline"> <input
+								type="radio" name="execution" value="excellent">
+						</label></td>
+					</tr>
+				</table>
+			</div>
+			<hr>
+		</div>
+		<br>
+
+		<div class="row">
+
+			<!-- give grade -->
+			<div required class="form-group">
+				<label for="inputName">Grade</label>
+				<div class="controls">
+					<input class="form-control" required type="text"
+						cam-variable-name="graduationGrade" cam-variable-type="String" />
+				</div>
+			</div>
+			<br>
+			<!-- sign MSC assesmentform -->
+			<div>
+				<input required type="checkbox" name="signStudyProgram" value="True"
+					cam-variable-name="signMscAssesmentForm"
+					cam-variable-type="Boolean"> Signature Graduation
+				Supervisor<br>
+			</div>
+			<br>
+
+			<!-- Date -->
+			<div class="form-group">
+				<label for="inputName">Date</label>
+				<div class="controls">
+					<input required class="form-control" type="Date"
+						cam-variable-name="graduationDate" cam-variable-type="String" />
+				</div>
+			</div>
+			<br>
+			<div>
+				<label for="inputName"> Graduation Project Completed<br></label>
+				<select required cam-variable-name="graduationProjectCompleted"
+					cam-variable-type="Boolean">
+					<option value="true">Yes</option>
+					<option value="false">Non</option>
+				</select>
+			</div>
+			<hr>
+		</div>
+
+	</form>
+</body>
+</html>
