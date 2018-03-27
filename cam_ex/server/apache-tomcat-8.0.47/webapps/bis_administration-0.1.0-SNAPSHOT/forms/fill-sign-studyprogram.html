@@ -16,7 +16,7 @@
         <label for="inputName">Name</label>
         <div class="controls">
           <input class="form-control"
-               required
+               
                type="text"
                cam-variable-name="studentName"
                cam-variable-type="String"
@@ -32,7 +32,7 @@
         <label for="inputName">Student ID</label>
         <div class="controls">
           <input class="form-control"
-               required
+               
                type="text"
                cam-variable-name="studentId"
                cam-variable-type="String"
@@ -47,11 +47,11 @@
         <label for="inputName">Master Program</label>
         <div class="controls">
           <input class="form-control"
-               required
+               
                type="text"
                cam-variable-name="masterProgram"
                cam-variable-type="String"
-               placeholder="BIS"
+               value="BIS"
                disabled />
         </div>
       </div>
@@ -62,7 +62,7 @@
         <label for="selectLoanType">Master Stream</label>
         <div class="controls"> 
           <!--select box -->
-          <select required
+          <select 
            class="form-control"
            name="masterStream"
            cam-variable-name="masterStream"
@@ -77,7 +77,7 @@
       
       <!-- Custom validation message for select box -->
       <div>
-        <p ng-if="variablesForm.loanType.$invalid" style="color: red"> Please select a master stream. </p>
+        <p ng-if="fillSignStudyProgram.masterStream.$invalid" style="color: red"> Please select a master stream. </p>
       </div>
     </div>
     <div class="col-xs-6"> 
@@ -196,7 +196,7 @@
     <div class="form-group">
       <label for="inputName">BPI Variant</label>
       <div class="controls"> <!--select box -->
-        <select required
+        <select 
            class="form-control"
            name="bpiVariant"
            cam-variable-name="bpiVariant"
@@ -211,7 +211,7 @@
     <div class="form-group">
       <label for="inputName">Elective 1</label>
       <div class="controls">
-        <select required
+        <select 
            class="form-control"
            name="bpiVariant"
            cam-variable-name="elective1"
@@ -225,7 +225,7 @@
     <div class="form-group">
       <label for="inputName">Elective 2</label>
       <div class="controls">
-        <select required
+        <select 
            class="form-control"
            name="bpiVariant"
            cam-variable-name="elective2"
