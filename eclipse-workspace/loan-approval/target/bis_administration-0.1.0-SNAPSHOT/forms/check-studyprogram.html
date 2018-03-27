@@ -238,12 +238,16 @@
     <br>
     <!-- sign form -->
     <div>
-      <input type="checkbox" 
-      name="signStudyProgram" 
-      cam-variable-name="signStudyProgramSupervisor"
-      cam-variable-type="Boolean">
-      Sign Study Program as Graduation Supervisor<br>
-    </div>
+	<select required
+			cam-variable-name="StudyProgramApproved"
+			cam-variable-type="String">
+	  <option value="2">Study Program Approved</option>
+	  <option value="1">Study Program Disapproved, student can be heard</option>
+	  <option value="0">Study Program Disapproved, student can not be heard</option>
+	</select>
+      Supervisor Sign Study Program <br>
+	  <br>
+      </div>
   <hr></div>
 </form>
 </body>

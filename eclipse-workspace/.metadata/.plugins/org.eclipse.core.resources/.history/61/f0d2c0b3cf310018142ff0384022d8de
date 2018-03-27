@@ -1,0 +1,241 @@
+<form role="form"
+      name="sign-studyprogram">
+  <h2>Study Planning Master</h2>
+  <div class="row">
+    <div class="col-xs-6"> 
+      <!-- Name -->
+      <div class="form-group">
+        <label for="inputName">Name</label>
+        <div class="controls">
+          <input class="form-control"
+               type="text"
+               cam-variable-name="studentName"
+               cam-variable-type="String"
+               placeholder="Student Name"
+               ng-minlength="2"
+               ng-maxlength="40" />
+        </div>
+      </div>
+      <br>
+      
+      <!-- StudentNumber -->
+      <div class="form-group">
+        <label for="inputName">Student ID</label>
+        <div class="controls">
+          <input class="form-control"
+               
+               type="text"
+               cam-variable-name="studentId"
+               cam-variable-type="String"
+               placeholder="1234567"
+               ng-minlength="7"
+               ng-maxlength="7" />
+        </div>
+      </div>
+      <br>
+      <!-- Master Program-->
+      <div class="form-group">
+        <label for="inputName">Master Program</label>
+        <div class="controls">
+          <input class="form-control"
+               
+               type="text"
+               cam-variable-name="masterProgram"
+               cam-variable-type="String"
+               value="BIS"
+               disabled />
+        </div>
+      </div>
+      <br>
+      
+      <!-- Master Stream -->
+      <div class="form-group">
+        <label for="selectLoanType">Master Stream</label>
+        <div class="controls"> 
+          <!--select box -->
+          <select 
+           class="form-control"
+           name="masterStream"
+           cam-variable-name="masterStream"
+           cam-variable-type="String"
+           >
+            <option value="BPI" checked>BPI</option>
+            <option value="IM">IM</option>
+            <option value="Logistics">Logistics</option>
+          </select>
+        </div>
+      </div>
+      
+      <!-- Custom validation message for select box -->
+      <div>
+        <p ng-if="fillSignStudyProgram.masterStream.$invalid" style="color: red"> Please select a master stream. </p>
+      </div>
+    </div>
+    <div class="col-xs-6"> 
+      <!-- Supervisor -->
+      <div class="form-group">
+        <label for="inputName">Graduation Supervisor</label>
+        <div class="controls">
+          <input class="form-control"
+               type="text"
+               cam-variable-name="graduationSupervisor"
+               cam-variable-type="String"
+               placeholder="Name"
+               ng-minlength="2"
+               ng-maxlength="40" />
+        </div>
+      </div>
+      <br>
+      <!-- Mentor -->
+      <div class="form-group">
+        <label for="inputName">Mentor*</label>
+        <div class="controls">
+          <input class="form-control"
+               type="text"
+               cam-variable-name="mentorName"
+               cam-variable-type="String"
+               placeholder="Name"
+               ng-minlength="2"
+               ng-maxlength="40" />
+        </div>
+      </div>
+      <br>
+      
+      <!-- Expertise Group -->
+      <div class="form-group">
+        <label for="inputName">Expertise Group</label>
+        <div class="controls">
+          <input class="form-control"
+               type="text"
+               cam-variable-name="expertiseGroup"
+               cam-variable-type="String"
+               placeholder="Information Systems"
+               ng-minlength="2"
+               ng-maxlength="40" />
+        </div>
+      </div>
+      <br>
+      
+      <!-- Bachelor -->
+      <div class="form-group">
+        <label for="inputName">Bachelor</label>
+        <div class="controls">
+          <input class="form-control"
+               type="text"
+               cam-variable-name="bachelorName"
+               cam-variable-type="String"
+               placeholder="Web Science"
+               ng-minlength="2"
+               ng-maxlength="40" />
+        </div>
+      </div>
+      <br>
+      <!-- Enrollment Date -->
+      <div class="form-group">
+        <label for="inputName">Date of Enrollment</label>
+        <div class="controls">
+          <input class="form-control"
+               type="Date"
+               cam-variable-name="enrollmentDate"
+               cam-variable-type="String"
+                />
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <br>
+  <div class="row">
+    <div>
+      <style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-p8bj{font-weight:bold;border-color:inherit;vertical-align:top}
+.tg .tg-le8v{background-color:#c0c0c0;vertical-align:top}
+.tg .tg-yw4l{vertical-align:top}
+</style>
+      <table class="tg">
+        <tr>
+          <th class="tg-p8bj">Course Code</th>
+          <th class="tg-p8bj">Course Title</th>
+          <th class="tg-p8bj">ECTS</th>
+          <th class="tg-p8bj">Type</th>
+        </tr>
+        <tr>
+          <td class="tg-le8v">2IMC00</td>
+          <td class="tg-le8v">Master Projec</td>
+          <td class="tg-le8v">30</td>
+          <td class="tg-le8v">Graduation Project</td>
+        </tr>
+        <tr>
+          <td class="tg-yw4l">1BM05</td>
+          <td class="tg-yw4l">Business Process management</td>
+          <td class="tg-yw4l">5</td>
+          <td class="tg-yw4l">Compulsory Course</td>
+        </tr>
+        <tr>
+          <td class="tg-le8v">1BM41</td>
+          <td class="tg-le8v">Business Information Systems Architecture</td>
+          <td class="tg-le8v">5</td>
+          <td class="tg-le8v">Compulsory Course</td>
+        </tr>
+      </table>
+      <br>
+    </div>
+    <!-- BPI Variant -->
+    <div class="form-group">
+      <label for="inputName">BPI Variant</label>
+      <div class="controls"> <!--select box -->
+        <select 
+           class="form-control"
+           name="bpiVariant"
+           cam-variable-name="bpiVariant"
+           cam-variable-type="String"
+           >
+          <option value="dataMining" checked>Data Mining 2IMI20 and 2IMI15 - Foundations of data mining and Web information retrieval and data mining</option>
+          <option value="processMining">Process Mining 1BM56 and 2IMI35 - Business intelligence and Introduction to process mining</option>
+        </select>
+      </div>
+    </div>
+    <!-- Elective 1 -->
+    <div class="form-group">
+      <label for="inputName">Elective 1</label>
+      <div class="controls">
+        <select 
+           class="form-control"
+           name="bpiVariant"
+           cam-variable-name="elective1"
+           cam-variable-type="String"
+           >
+          <option value="elective" checked>A</option>
+        </select>
+      </div>
+    </div>
+    <!-- Elective 2 -->
+    <div class="form-group">
+      <label for="inputName">Elective 2</label>
+      <div class="controls">
+        <select 
+           class="form-control"
+           name="bpiVariant"
+           cam-variable-name="elective2"
+           cam-variable-type="String"
+           >
+          <option value="elective" checked>A</option>
+        </select>
+      </div>
+    </div>
+    
+	<div class="row">
+		<!-- sign form -->
+		<div>
+			<input type="checkbox" name="signStudyProgram"
+				cam-variable-name="supervisorSignStudyProgram"
+				cam-variable-type="Boolean" /> Supervisor Sign Study Program<br>
+		</div>
+		<br>
+		<hr>
+	</div>
+
+</form>

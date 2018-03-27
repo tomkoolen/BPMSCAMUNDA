@@ -14,7 +14,7 @@
 				<div class="form-group">
 					<label for="inputName">Name</label>
 					<div class="controls">
-						<input class="form-control" required type="text"
+						<input  class="form-control" type="text"
 							cam-variable-type="String" cam-variable-name="studentName" disabled />
 					</div>
 				</div>
@@ -25,7 +25,7 @@
 				<div class="form-group">
 					<label for="inputName">Course Code</label>
 					<div class="controls">
-						<input class="form-control" required type="text"
+						<input  class="form-control" type="text"
 							cam-variable-name="courseCode" cam-variable-type="String"
 							placeholder="2IMC00" disabled />
 					</div>
@@ -37,7 +37,7 @@
 			<div class="form-group">
 				<label for="inputName">Student ID</label>
 				<div class="controls">
-					<input class="form-control" required type="text"
+					<input  class="form-control" type="text"
 						cam-variable-type="String" cam-variable-name="studentId" disabled />
 				</div>
 			</div>
@@ -46,7 +46,7 @@
 			<div class="form-group">
 				<label for="inputName">Master Program</label>
 				<div class="controls">
-					<input class="form-control" required type="text"
+					<input  class="form-control" type="text"
 						cam-variable-type="String" cam-variable-name="masterProgram" placeholder = "BIS" disabled />
 				</div>
 			</div>
@@ -271,17 +271,17 @@
 		<div class="row">
 
 			<!-- give grade -->
-			<div required class="form-group">
+			<div class="form-group">
 				<label for="inputName">Grade</label>
 				<div class="controls">
-					<input class="form-control" required type="text"
+					<input  class="form-control" type="text"
 						cam-variable-name="graduationGrade" cam-variable-type="String" />
 				</div>
 			</div>
 			<br>
 			<!-- sign MSC assesmentform -->
 			<div>
-				<input required type="checkbox" name="signStudyProgram" value="True"
+				<input  type="checkbox" name="signStudyProgram" value="True"
 					cam-variable-name="signMscAssesmentForm"
 					cam-variable-type="Boolean"> Signature Graduation
 				Supervisor<br>
@@ -292,17 +292,17 @@
 			<div class="form-group">
 				<label for="inputName">Date</label>
 				<div class="controls">
-					<input required class="form-control" type="Date"
+					<input  class="form-control" type="Date"
 						cam-variable-name="graduationDate" cam-variable-type="String" />
 				</div>
 			</div>
 			<br>
 			<div>
 				<label for="inputName"> Graduation Project Completed<br></label>
-				<select required cam-variable-name="graduationProjectCompleted"
+				<select  cam-variable-name="graduationProjectCompleted"
 					cam-variable-type="Boolean">
 					<option value="true">Yes</option>
-					<option value="false">Non</option>
+					<option value="false">No</option>
 				</select>
 			</div>
 			<hr>

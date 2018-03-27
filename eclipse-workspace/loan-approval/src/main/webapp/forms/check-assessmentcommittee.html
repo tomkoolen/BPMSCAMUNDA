@@ -144,13 +144,14 @@
                cam-variable-type="String"
                 />
 		<br><div>
-		<br>
 			<!-- sign form -->
-			<input required type="checkbox" name="signStudentGraduationProgram"
-				value="signStudentGraduationProgram"
-				cam-variable-name="signedAssessmentCommitteeFormSupervisor"
-				cam-variable-type="Boolean"> Confirm Assessment Committee<br>
+			<select required cam-variable-name="asssesmentCommitteeApproved"
+				cam-variable-type="Boolean">
+				<option value="true">Approve</option>
+				<option value="false">Disapprove</option>
+			</select> Approve Assessment Committee <br> <br>
 		</div>
+
 	</div>
 		</div>
 	</div>

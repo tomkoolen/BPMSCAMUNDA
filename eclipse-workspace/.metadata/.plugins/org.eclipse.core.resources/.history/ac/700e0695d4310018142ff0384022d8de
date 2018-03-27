@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<form role="form"
+      name="variablesForm">
+
+    <center>
+      <h2>Diploma Qualification</h2>
+    </center>
+  
+      
+      <!-- Finished Project -->
+      <div class="form-group">
+        <label for="InputName">Graduation Project Finished </label>
+        <div class="controls">
+          <input class="form-control"
+               type="text"
+               cam-variable-name="graduationProjectCompleted"
+               cam-variable-type="Boolean"
+               disabled />
+        </div>
+      </div>
+      <br>
+      <!-- Grade -->
+      <div class="form-group">
+        <label for="InputName">Grade Graduation Project</label>
+        <div class="controls">
+          <input
+           class="form-control"
+           type="text"
+           cam-variable-name="graduationGrade"
+           cam-variable-type = "String" 
+           disabled>
+        </div>
+      </div>
+      <br>
+      
+ <div>
+  <label for="inputName"> Student Qualified for Diploma<br></label>
+  <select required
+			cam-variable-name="diplomaQualification"
+			cam-variable-type="Boolean">
+	  <option value="true">Yes</option>
+	  <option value="false">Non</option>
+	</select>
+	  </div>    
+      <hr>   
+      
+   
+	</form>
+</html>

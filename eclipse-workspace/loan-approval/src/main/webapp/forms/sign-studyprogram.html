@@ -230,10 +230,15 @@
 	<div class="row">
 		<!-- sign form -->
 		<div>
-			<input type="checkbox" name="signStudyProgram"
-				cam-variable-name="supervisorSignStudyProgram"
-				cam-variable-type="Boolean"> Supervisor Sign Study Program<br>
-		</div>
+	<select required
+			cam-variable-name="supervisorSignStudyProgram"
+			cam-variable-type="Boolean">
+	  <option value="true">Sign</option>
+	  <option value="false">Do not sign</option>
+	</select>
+      Supervisor Sign Study Program <br>
+	  <br>
+      </div>
 		<br>
 		<hr>
 	</div>

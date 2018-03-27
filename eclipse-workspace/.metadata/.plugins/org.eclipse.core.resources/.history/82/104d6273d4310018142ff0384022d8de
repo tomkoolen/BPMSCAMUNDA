@@ -1,0 +1,32 @@
+<form name="check-diplomaqualification">
+	<script cam-script type="text/form-script">
+    camForm.on('form-loaded', function() {
+      camForm.variableManager.fetchVariable('signedBySupervisorAssessment');
+    });
+    camForm.on('variables-restored', function() {
+      $scope.signedBySupervisorAssessment = camForm.variableManager.variableValue('signedBySupervisorAssessment');
+    });
+  </script>
+
+	<h2>Summary</h2>
+
+	<table>
+
+		<tr>
+			<td>Supervisor:</td>
+			<td>{{ signedBySupervisorAssessment }}</td>
+		</tr>
+
+	</table>
+
+
+	<div>
+		<!-- sign form -->
+		<select required cam-variable-name="qualifiedForDiploma"
+			cam-variable-type="Boolean">
+			<option value="true">Approve</option>
+			<option value="false">Disapprove</option>
+		</select> Supervisor Sign Study Program <br> <br>
+	</div>
+
+</form>
