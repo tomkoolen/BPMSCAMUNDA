@@ -1,0 +1,325 @@
+<form name="fill-sign-graduationplan">
+	<script cam-script type="text/form-script">
+    camForm.on('form-loaded', function() {
+      	camForm.variableManager.fetchVariable('studentName');
+		camForm.variableManager.fetchVariable('studentId');
+		camForm.variableManager.fetchVariable('masterProgram');
+    });
+    camForm.on('variables-restored', function() {
+      	$scope.studentName = camForm.variableManager.variableValue('studentName');
+	  	$scope.studentId = camForm.variableManager.variableValue('studentId');
+		$scope.masterProgram = camForm.variableManager.variableValue('masterProgram');
+    });
+  </script>
+	<h2>Graduation Plan</h2>
+	<div class="row">
+
+		<!-- Name -->
+		<div class="form-group">
+			<label for="inputName">Name</label>
+			<div class="controls">
+				<input class="form-control" type="text" value={{studentName}}
+					disabled />
+			</div>
+		</div>
+		<br>
+
+		<!-- StudentNumber -->
+		<div class="form-group">
+			<label for="inputName">Student ID</label>
+			<div class="controls">
+				<input class="form-control" type="text" value={{studentId}} disabled />
+			</div>
+		</div>
+		<br>
+		<!-- Master Program-->
+		<div class="form-group">
+			<label for="inputName">Master Program</label>
+			<div class="controls">
+				<input class="form-control" type="text" value={{masterProgram}}
+					disabled />
+			</div>
+		</div>
+		<hr>
+	</div>
+	<br>
+	<div class="row">
+		<!-- Graduation Topic-->
+		<div class="form-group">
+			<label for="inputName">Graduation Topic</label>
+			<div class="controls">
+				<input required class="form-control" type="text"
+					cam-variable-name="graduationTopic" cam-variable-type="String" />
+			</div>
+		</div>
+		<br>
+		<!-- Problem Description-->
+		<div class="form-group">
+			<label for="inputName">Problem Description</label>
+			<div class="controls">
+				<input required class="form-control" type="text"
+					cam-variable-name="problemDescription" cam-variable-type="String" />
+			</div>
+		</div>
+		<br>
+
+		<!-- Graduation Period -->
+		<div class="form-group">
+			<label for="inputName">Graduation Period<br>
+			</label> <label>from</label>
+			<div class="controls">
+				<input required class="form-control" type="Date"
+					cam-variable-name="graduationStartDate" cam-variable-type="String"
+					placeholder="yyyy-mm-dd">
+			</div>
+		</div>
+		<br>
+		<!-- Graduation Date untill -->
+		<div class="form-group">
+			<label for="inputName">until</label>
+			<div class="controls">
+				<input required class="form-control" type="Date"
+					cam-variable-name="graduationEndDate" cam-variable-type="String"
+					placeholder="yyyy-mm-dd">
+			</div>
+		</div>
+		<br>
+		<!-- fulltime student -->
+		<div class="form-group">
+			<label for="inputName">Full Time student<br>
+			</label> <input type="radio" name="fulltime" value="true" checked
+				cam-variable-name="fulltimeStudent" cam-variable-type="Boolean">
+			Yes<br> <input type="radio" name="fulltime" value="false"
+				cam-variable-name="parttimeStudent" cam-variable-type="Boolean">
+			No<br>
+			<div class="controls">
+				<input class="form-control" type="text"
+					cam-variable-name="parttimePercentage" cam-variable-type="String"
+					placeholder="parttime%" />
+			</div>
+		</div>
+		<br>
+		<!-- Project carried out-->
+		<div class="form-group">
+			<label for="inputName">Project carried out at</label>
+			<div class="controls">
+				<input required class="form-control" type="text"
+					cam-variable-name="projectCarriedOut" cam-variable-type="String"
+					placeholder="name of company" />
+			</div>
+		</div>
+		<br>
+
+		<!-- Project location-->
+		<div class="form-group">
+			<label for="inputName">Project location</label>
+			<div class="controls">
+				<input required class="form-control" type="text"
+					cam-variable-name="projectLocation" cam-variable-type="String"
+					placeholder="Eindhoven" />
+			</div>
+		</div>
+		<br>
+
+		<!-- Phonenumber student-->
+		<div class="form-group">
+			<label for="inputName">Phone number</label>
+			<div class="controls">
+				<input required class="form-control" type="text"
+					cam-variable-name="phoneNumberStudent" cam-variable-type="String"
+					placeholder="0612345678" ng-minlength="10" ng-maxlength="10" />
+			</div>
+		</div>
+		<hr>
+	</div>
+	<br>
+
+	<div class="row">
+		<div class="col-xs-6">
+			<!-- responsible name-->
+
+			<div class="form-group">
+				<label for="inputName"><b>Final Responsible</b><br> <br>
+					Graduation Supervisor</label>
+				<div class="controls">
+					<input required class="form-control" type="text"
+						cam-variable-name="graduationSupervisor"
+						cam-variable-type="String" placeholder="Name" />
+				</div>
+			</div>
+			<br>
+			<!-- section-->
+			<div class="form-group">
+				<label for="inputName">TU/e Section</label>
+				<div class="controls">
+					<input required class="form-control" type="text"
+						cam-variable-name="supervisorSection" cam-variable-type="String"
+						placeholder="section" />
+				</div>
+			</div>
+			<br>
+			<!-- email-->
+			<div class="form-group">
+				<label for="inputName">E-mail Adress</label>
+				<div class="controls">
+					<input required class="form-control" type="email"
+						cam-variable-name="supervisorMail" cam-variable-type="String"
+						placeholder="x.lastname@tue.nl" />
+				</div>
+			</div>
+			<br>
+			<!-- phonenumber -->
+			<div class="form-group">
+				<label for="inputName">Telephone Number</label>
+				<div class="controls">
+					<input required class="form-control" type="text"
+						cam-variable-name="numberSupervisor" cam-variable-type="String"
+						placeholder="040-2222" />
+				</div>
+			</div>
+			<br>
+		</div>
+		<div class="col-xs-6">
+			<!-- if other responsible-->
+			<div class="form-group">
+				<label for="inputName"><b>Person taking care of
+						practical supervision, if not the same</b><br> <br>
+					Graduation Supervisor</label>
+				<div class="controls">
+					<input class="form-control" type="text"
+						cam-variable-name="practicalSupervisor" cam-variable-type="String"
+						placeholder="Name" />
+				</div>
+			</div>
+			<br>
+			<!-- section-->
+			<div class="form-group">
+				<label for="inputName">TU/e Section</label>
+				<div class="controls">
+					<input class="form-control" type="text"
+						cam-variable-name="practicalSupervisorSection"
+						cam-variable-type="String" placeholder="section" />
+				</div>
+			</div>
+			<br>
+			<!-- email-->
+			<div class="form-group">
+				<label for="inputName">E-mail Adress</label>
+				<div class="controls">
+					<input class="form-control" type="mail"
+						cam-variable-name="practicalSupervisorMail"
+						cam-variable-type="String" placeholder="x.lastname@tue.nl" />
+				</div>
+			</div>
+			<br>
+			<!-- phonenumber -->
+			<div class="form-group">
+				<label for="inputName">Telephone Number</label>
+				<div class="controls">
+					<input class="form-control" type="text"
+						cam-variable-name="practicalSupervisorNumber"
+						cam-variable-type="String" placeholder="040-2222" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div clas="col-xs-6">
+			<!-- othersinvolved-->
+			<div class="form-group">
+				<label for="inputName"><b>Others involved</b><br> <br>
+					Name</label>
+				<div class="controls">
+					<input class="form-control" type="text"
+						cam-variable-name="otherInvolvedName" cam-variable-type="String"
+						placeholder="Name" />
+				</div>
+			</div>
+			<br>
+			<!-- affiliation-->
+			<div class="form-group">
+				<label for="inputName">Affiliation</label>
+				<div class="controls">
+					<input class="form-control" type="text"
+						cam-variable-name="otherAffiliation" cam-variable-type="String" />
+				</div>
+			</div>
+			<br>
+			<!-- Address-->
+			<div class="form-group">
+				<label for="inputName">Adress</label>
+				<div class="controls">
+					<input class="form-control" type="text"
+						cam-variable-name="otherAddress" cam-variable-type="String"
+						placeholder="adress" />
+				</div>
+			</div>
+			<br>
+		</div>
+		<div clas="col-xs-6">
+			<!-- othersinvolved-->
+			<div class="form-group">
+				<label for="inputName"><b>Others involved</b><br> <br>
+					Name</label>
+				<div class="controls">
+					<input class="form-control" type="text"
+						cam-variable-name="otherInvolvedName2" cam-variable-type="String"
+						placeholder="Name" />
+				</div>
+			</div>
+			<br>
+			<!-- affiliation-->
+			<div class="form-group">
+				<label for="inputName">Affiliation</label>
+				<div class="controls">
+					<input class="form-control" type="text"
+						cam-variable-name="otherAffiliation2" cam-variable-type="String" />
+				</div>
+			</div>
+			<br>
+			<!-- Adress-->
+			<div class="form-group">
+				<label for="inputName">Adress</label>
+				<div class="controls">
+					<input class="form-control" type="text"
+						cam-variable-name="otherAddress2" cam-variable-type="String"
+						placeholder="adress" />
+				</div>
+			</div>
+			<br>
+		</div>
+		<hr>
+	</div>
+
+	<!-- left over courses-->
+	<div class="form-group">
+		<label for="inputName">Programs units that are not completed
+			at the start of the graduation phase (Program unit code, program unit
+			name and credits):<br> <br> Course1
+		</label>
+		<div class="controls">
+			<input class="form-control" type="text"
+				cam-variable-name="remainingCourse1" cam-variable-type="String"
+				placeholder="code,name,ECTS" />
+		</div>
+		<br> <label>Course2</label>
+		<div class="controls">
+			<input class="form-control" type="text"
+				cam-variable-name="remainingCourse2" cam-variable-type="String"
+				placeholder="code,name,ECTS" />
+		</div>
+	</div>
+	<br>
+	<div>
+		<!-- sign form -->
+		<input required type="checkbox" name="signStudentGraduationProgram"
+			value="true" cam-variable-name="studentSignGraduationPlan"
+			cam-variable-type="Boolean"> Student Sign Study Program<br>
+			<input required type="checkbox"
+			name="declareGraduationRegulations" value="true"
+			cam-variable-name="checkGraduationRegulations"
+			cam-variable-type="Boolean"> I hereby declare that I have
+		read and agree to the [Graduation Regulations] for the Masters thesis
+	</div>
+</form>

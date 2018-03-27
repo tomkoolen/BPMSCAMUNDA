@@ -1,9 +1,13 @@
 <form name="wants-to-be-heard">
   <div class="form-group">
     <label for="wants-to-be-heard">Do you want to be heard?</label>
-    <input class="form-control"
+    <select class="form-control"
            cam-variable-type="Boolean"
            cam-variable-name="wantsToBeHeard"
-           name ="wantsToBeHeard" />
+           name ="wantsToBeHeard">
+     <option value="true"> Yes </option>
+     <option value="false"> No </option>
+     <option></option>
+     </select>
   </div>
 </form>

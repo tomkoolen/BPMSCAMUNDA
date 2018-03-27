@@ -1,0 +1,175 @@
+<form name="fill-sign-assessmentcommittee">
+	<script cam-script type="text/form-script">
+    camForm.on('form-loaded', function() {
+      	camForm.variableManager.fetchVariable('studentName');
+		camForm.variableManager.fetchVariable('studentId');
+		camForm.variableManager.fetchVariable('presentationDate');
+		camForm.variableManager.fetchVariable('graduationSupervisor');
+		camForm.variableManager.fetchVariable('tutorAdditionalMember');
+		camForm.variableManager.fetchVariable('votingMember');
+		camForm.variableManager.fetchVariable('advisorMember');
+		camForm.variableManager.fetchVariable('departmentGraduationAdvisor');
+		camForm.variableManager.fetchVariable('departmentTutorAdditionalMember');
+		camForm.variableManager.fetchVariable('departmentVotingMember');
+    });
+    camForm.on('variables-restored', function() {
+      	$scope.studentName = camForm.variableManager.variableValue('studentName');
+	  	$scope.studentId = camForm.variableManager.variableValue('studentId');
+		$scope.studentName = camForm.variableManager.variableValue('presentationDate');
+	  	$scope.studentId = camForm.variableManager.variableValue('graduationSupervisor');
+		$scope.studentName = camForm.variableManager.variableValue('tutorAdditionalMember');
+	  	$scope.studentId = camForm.variableManager.variableValue('votingMember');
+		$scope.studentName = camForm.variableManager.variableValue('advisorMember');
+	  	$scope.studentId = camForm.variableManager.variableValue('departmentGraduationAdvisor');
+		$scope.studentName = camForm.variableManager.variableValue('departmentTutorAdditionalMember');
+	  	$scope.studentId = camForm.variableManager.variableValue('departmentVotingMember');
+    });
+ </script>
+	<div class="row">
+		<h2>Assessment committee form</h2>
+		<div class="col-xs-6">
+
+			<!-- Student Name -->
+			<div class="form-group">
+				<label for="InputName">Name</label>
+				<div class="controls">
+					<input class="form-control" name="studentName"
+						value="{{ studentName }}" readonly>
+				</div>
+			</div>
+
+			<!-- ID -->
+			<div class="form-group">
+				<label for="InputName">Student ID</label>
+				<div class="controls">
+					<input class="form-control" name="studentId"
+						value="{{ studentId }}" readonly>
+				</div>
+			</div>
+
+			<!-- MSC Program -->
+			<div class="form-group">
+				<label for="InputName">MSc Program</label>
+				<div class="controls">
+					<input class="form-control" name="MScProgram" value="BIS" disabled>
+				</div>
+			</div>
+
+			<!-- Date Selection -->
+			<div class="form-group">
+				<label for="InputName">Date presentation and defense thesis</label>
+				<div class="controls">
+					<input required type="date" class="form-control"
+						name="datePresentation" value = "{{presentationDate}}">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<hr>
+	</div>
+	<div class="row">
+		<div class="col-xs-6">
+			<h3>Members of committee</h3>
+			<!-- Graduation Advisor -->
+			<div class="form-group">
+				<label for="InputName">Graduation Supervisor</label>
+				<div class="controls">
+					<input required class="form-control" name="graduationSupervisor"
+						value = "{{graduationSupervisor}}"/>
+				</div>
+			</div>
+			<!-- Tutor/Additional Member -->
+			<div class="form-group">
+				<label for="InputName">Tutor/Additional Member**</label>
+				<div class="controls">
+					<input required
+						class="form-control" 
+						name="tutorAdditionalMember"
+						value="{{tutorAdditionalMember}}" />
+				</div>
+			</div>
+			<!-- Voting Member -->
+			<div class="form-group">
+				<label for="InputName">Voting member</label>
+				<div class="controls">
+					<input class="form-control" name="votingMember"
+						value = "{{votingMember}}">
+				</div>
+			</div>
+			<!-- Advisor Member -->
+			<div class="form-group">
+				<label for="InputName">Advisor/Non voting member</label>
+				<div class="controls">
+					<input class="form-control" name="advisorMember"
+						value="{{advisorMember}}">
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-6">
+			<!-- Department Voting member-->
+			<div class="form-group">
+				<label for="selectLoanType">Department</label>
+				<div class="controls">
+					<!--select box -->
+					<select required class="form-control"
+						name="departmentGraduationAdvisor"
+						value = "{{departmentGraduationAdvisor}}">
+						<option value="mcs">Mathematics and Computer Science</option>
+						<option value="ieis">Industrial Engineering and
+							Innovation Sciences</option>
+					</select>
+				</div>
+			</div>
+
+			<!-- Department Tutor/Additional Member-->
+			<div class="form-group">
+				<label for="selectLoanType">Department</label>
+				<div class="controls">
+					<!--select box -->
+					<select required class="form-control"
+						name="departmentTutorAdditionalMember"
+						value = "{{departmentTutorAdditionalMember}}">
+						<option value="mcs">Mathematics and Computer Science</option>
+						<option value="ieis">Industrial Engineering and
+							Innovation Sciences</option>
+						<option value="other">Other/Company</option>
+					</select>
+				</div>
+			</div>
+
+			<!-- Department-->
+			<div class="form-group">
+				<label for="selectLoanType">Department</label>
+				<div class="controls">
+					<!--select box -->
+					<select required class="form-control" name="departmentVotingMember"
+						value = "departmentVotingMember">
+						<option value="mcs">Mathematics and Computer Science</option>
+						<option value="ieis">Industrial Engineering and
+							Innovation Sciences</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		**If the graduation supervisor was also the tutor an additional
+		committee member is required. Choose what is applicable.<br> The
+		tutor can only be listed if he/she was the daily (company) supervisor
+		of the student.<br> If the tutor is from an external company,
+		list the name, otherwise the chair.
+	</div>
+	<div class="row">
+		<hr>
+	</div>
+	<div class="row">
+		<div>
+			<!-- sign form -->
+			<input type="checkbox" name="signStudentGraduationProgram"
+				value="signStudentGraduationProgram"
+				cam-variable-name="signedAssessmentCommitteeFormSupervisor"
+				cam-variable-type="Boolean" required> Confirm Assessment Committee<br>
+		</div>
+	</div>
+</form>

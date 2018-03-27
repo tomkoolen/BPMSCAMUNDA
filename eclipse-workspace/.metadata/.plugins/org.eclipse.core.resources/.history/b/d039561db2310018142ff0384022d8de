@@ -1,0 +1,51 @@
+
+<form role="form" name="variablesForm">
+	<div class="row">
+		<center>
+			<h2>Code of Scientific Conduct</h2>
+		</center>
+		<div class="col-xs-6">
+
+			<!-- Student Name -->
+			<div class="form-group">
+				<label for="InputName">Name</label>
+				<div class="controls">
+					<input class="form-control" name="studentName"
+						value="{{ studentName }}" disabled>
+				</div>
+			</div>
+
+			<!-- ID -->
+			<div class="form-group">
+				<label for="InputName">Student ID</label>
+				<div class="controls">
+					<input class="form-control" name="studentId"
+						value="{{ studentId }}" disabled>
+				</div>
+			</div>
+
+
+			<!-- Date Selection -->
+			<div class="form-group">
+				<label for="InputName">Today's date</label>
+				<div class="controls">
+					<input required type="date" class="form-control"
+						name="datePresentation" cam-variable-name="presentationDate"
+						cam-variable-type="String">
+				</div>
+			</div>
+
+			<div type="row">
+				<div>
+					<!-- sign form -->
+					<input type="checkbox" name="signStudentGraduationProgram"
+						value="true" cam-variable-name="signedAssessmentCommitteeForm"
+						cam-variable-type="Boolean" required> I hereby
+					declare that I have read and agree to the <a
+						href="https://assets.tue.nl/fileadmin/content/universiteit/Over_de_universiteit/integriteit/TUe_Code_of_Scientific_Conduct_21-1-2015.pdf">TU/e
+						Code of Scientific Conduct</a> for the Masters Thesis<br>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>

@@ -1,0 +1,156 @@
+<form name="fill-sign-assessmentcommittee">
+	<div class="row">
+		<h2>Assessment committee form</h2>
+		<div class="col-xs-6">
+
+			<!-- Student Name -->
+			<div class="form-group">
+				<label for="InputName">Name</label>
+				<div class="controls">
+					<input class="form-control" name="studentName"
+						value="{{ studentName }}" readonly>
+				</div>
+			</div>
+
+			<!-- ID -->
+			<div class="form-group">
+				<label for="InputName">Student ID</label>
+				<div class="controls">
+					<input class="form-control" name="studentId"
+						value="{{ studentId }}" readonly>
+				</div>
+			</div>
+
+			<!-- MSC Program -->
+			<div class="form-group">
+				<label for="InputName">MSc Program</label>
+				<div class="controls">
+					<input class="form-control" name="MScProgram" value="BIS" disabled>
+				</div>
+			</div>
+
+			<!-- Date Selection -->
+			<div class="form-group">
+				<label for="InputName">Date presentation and defense thesis</label>
+				<div class="controls">
+					<input required type="date" class="form-control"
+						name="datePresentation" cam-variable-name="presentationDate"
+						cam-variable-type="String">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<hr>
+	</div>
+	<div class="row">
+		<div class="col-xs-6">
+			<h3>Members of committee</h3>
+			<!-- Graduation Advisor -->
+			<div class="form-group">
+				<label for="InputName">Graduation Supervisor</label>
+				<div class="controls">
+					<input class="form-control" name="graduationSupervisor"
+						placeholder="John Doe" cam-variable-name="graduationAdvisor"
+						cam-variable-type="String" required>
+				</div>
+			</div>
+			<!-- Tutor/Additional Member -->
+			<div class="form-group">
+				<label for="InputName">Tutor/Additional Member**</label>
+				<div class="controls">
+					<input class="form-control" name="tutorAdditionalMember"
+						placeholder="John Doe" cam-variable-name="tutorAdditionalMember"
+						cam-variable-type="String" required>
+				</div>
+			</div>
+			<!-- Voting Member -->
+			<div class="form-group">
+				<label for="InputName">Voting member</label>
+				<div class="controls">
+					<input class="form-control" name="votingMember"
+						placeholder="John Doe" cam-variable-name="votingMember"
+						cam-variable-type="String">
+				</div>
+			</div>
+			<!-- Advisor Member -->
+			<div class="form-group">
+				<label for="InputName">Advisor/Non voting member</label>
+				<div class="controls">
+					<input class="form-control" name="advisorMember"
+						placeholder="John Doe" cam-variable-name="advisorMember"
+						cam-variable-type="String">
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-6">
+			<!-- Department Voting member-->
+			<div class="form-group">
+				<label for="selectLoanType">Department</label>
+				<div class="controls">
+					<!--select box -->
+					<select required class="form-control"
+						name="departmentGraduationAdvisor"
+						cam-variable-name="departmentGraduationAdvisor"
+						cam-variable-type="String">
+						<option value="mcs">Mathematics and Computer Science</option>
+						<option value="ieis">Industrial Engineering and
+							Innovation Sciences</option>
+					</select>
+				</div>
+			</div>
+
+			<!-- Department Tutor/Additional Member-->
+			<div class="form-group">
+				<label for="selectLoanType">Department</label>
+				<div class="controls">
+					<!--select box -->
+					<select required class="form-control"
+						name="departmentTutorAdditionalMember"
+						cam-variable-name="departmentTutorAdditionalMember"
+						cam-variable-type="String">
+						<option value="mcs">Mathematics and Computer Science</option>
+						<option value="ieis">Industrial Engineering and
+							Innovation Sciences</option>
+						<option value="other">Other/Company</option>
+					</select>
+				</div>
+			</div>
+
+			<!-- Department-->
+			<div class="form-group">
+				<label for="selectLoanType">Department</label>
+				<div class="controls">
+					<!--select box -->
+					<select required class="form-control" name="departmentVotingMember"
+						cam-variable-name="departmentVotingMember"
+						cam-variable-type="String">
+						<option value="mcs">Mathematics and Computer Science</option>
+						<option value="ieis">Industrial Engineering and
+							Innovation Sciences</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div type="row">
+		**If the graduation supervisor was also the tutor an additional
+		committee member is required. Choose what is applicable.<br> The
+		tutor can only be listed if he/she was the daily (company) supervisor
+		of the student.<br> If the tutor is from an external company,
+		list the name, otherwise the chair.
+	</div>
+	<div type="row">
+		<hr>
+	</div>
+	<div type="row">
+		<div>
+			<!-- sign form -->
+			<input type="checkbox" name="signStudentGraduationProgram"
+				value="signStudentGraduationProgram"
+				cam-variable-name="signedAssessmentCommitteeForm"
+				cam-variable-type="Boolean" required> Confirm
+			Assessment Committee<br>
+		</div>
+	</div>
+</form>

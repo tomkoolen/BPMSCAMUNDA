@@ -1,0 +1,10 @@
+<form name="wants-to-be-heard">
+  <div class="form-group">
+    <label for="wants-to-be-heard">Do you want to be heard?</label>
+    <select class="form-control"
+           cam-variable-type="Boolean"
+           cam-variable-name="wantsToBeHeard"
+           name ="wantsToBeHeard">
+     </select>
+  </div>
+</form>

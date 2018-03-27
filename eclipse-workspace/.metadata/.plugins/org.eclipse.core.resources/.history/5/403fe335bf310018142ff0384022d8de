@@ -1,0 +1,447 @@
+<form name="check-study-program">
+<head>
+<meta charset="utf-8">
+<title>Graduation Plan</title>
+</head>
+<form role="form"
+      name="variablesForm">					  				   
+	<script cam-script type="text/form-script">
+    camForm.on('form-loaded', function() {
+      	camForm.variableManager.fetchVariable('studentName');
+		camForm.variableManager.fetchVariable('studentId');
+		camForm.variableManager.fetchVariable('masterProgram');
+		camForm.variableManager.fetchVariable('graduationTopic');
+		camForm.variableManager.fetchVariable('problemDescription');
+		camForm.variableManager.fetchVariable('graduationStartDate');
+		camForm.variableManager.fetchVariable('graduationEndDate');
+		camForm.variableManager.fetchVariable('fulltimeStudent');
+		camForm.variableManager.fetchVariable('parttimeStudent');
+		camForm.variableManager.fetchVariable('parttimePercentage');
+		camForm.variableManager.fetchVariable('projectCarriedOut');
+		camForm.variableManager.fetchVariable('projectLocation');
+		camForm.variableManager.fetchVariable('phoneNumberStudent');
+		camForm.variableManager.fetchVariable('graduationSupervisor');
+		camForm.variableManager.fetchVariable('supervisorSection');
+		camForm.variableManager.fetchVariable('supervisorMail');
+		camForm.variableManager.fetchVariable('numberSupervisor');
+		camForm.variableManager.fetchVariable('practicalSupervisor');
+		camForm.variableManager.fetchVariable('practicalSupervisorSection');
+		camForm.variableManager.fetchVariable('practicalSupervisorMail');
+		camForm.variableManager.fetchVariable('practicalSupervisorNumber');
+		camForm.variableManager.fetchVariable('otherInvolvedName');
+		camForm.variableManager.fetchVariable('otherAffiliation');
+		camForm.variableManager.fetchVariable('otherAddress');
+		camForm.variableManager.fetchVariable('otherInvolvedName2');
+		camForm.variableManager.fetchVariable('otherAffiliation2');
+		camForm.variableManager.fetchVariable('otherAddress2');
+		camForm.variableManager.fetchVariable('remainingCourse1');
+		camForm.variableManager.fetchVariable('remainingCourse2');
+
+    });
+    camForm.on('variables-restored', function() {
+      	$scope.studentName = camForm.variableManager.variableValue('studentName');
+	  	$scope.studentId = camForm.variableManager.variableValue('studentId');
+		$scope.masterProgram = camForm.variableManager.variableValue('masterProgram');
+		$scope.graduationTopic = camForm.variableManager.fetchVariable('graduationTopic');
+		$scope.problemDescription = camForm.variableManager.fetchVariable('problemDescription');
+		$scope.graduationStartDate = camForm.variableManager.fetchVariable('graduationStartDate');
+		$scope.graduationEndDate = camForm.variableManager.fetchVariable('graduationEndDate');
+		$scope.fulltimeStudent = camForm.variableManager.fetchVariable('fulltimeStudent');
+		$scope.parttimeStudent = camForm.variableManager.fetchVariable('parttimeStudent');
+		$scope.parttimePercentage = camForm.variableManager.fetchVariable('parttimePercentage');
+		$scope.projectCarriedOut = camForm.variableManager.fetchVariable('projectCarriedOut');
+		$scope.projectLocation = camForm.variableManager.fetchVariable('projectLocation');
+		$scope.phoneNumberStudent = camForm.variableManager.fetchVariable('phoneNumberStudent');
+		$scope.graduationSupervisor = camForm.variableManager.fetchVariable('graduationSupervisor');
+		$scope.supervisorSection = camForm.variableManager.fetchVariable('supervisorSection');
+		$scope.supervisorMail = camForm.variableManager.fetchVariable('supervisorMail');
+		$scope.numberSupervisor = camForm.variableManager.fetchVariable('numberSupervisor');
+		$scope.practicalSupervisor = camForm.variableManager.fetchVariable('practicalSupervisor');
+		$scope.practicalSupervisorSection = camForm.variableManager.fetchVariable('practicalSupervisorSection');
+		$scope.practicalSupervisorMail = camForm.variableManager.fetchVariable('practicalSupervisorMail');
+		$scope.practicalSupervisorNumber = camForm.variableManager.fetchVariable('practicalSupervisorNumber');
+		$scope.otherInvolvedName = camForm.variableManager.fetchVariable('otherInvolvedName');
+		$scope.otherAffiliation = camForm.variableManager.fetchVariable('otherAffiliation');
+		$scope.otherAddress = camForm.variableManager.fetchVariable('otherAddress');
+		$scope.otherInvolvedName2 = camForm.variableManager.fetchVariable('otherInvolvedName2');
+		$scope.otherAffiliation2 = camForm.variableManager.fetchVariable('otherAffiliation2');
+		$scope.otherAddress2 = camForm.variableManager.fetchVariable('otherAddress2');
+		$scope.remainingCourse1 = camForm.variableManager.fetchVariable('remainingCourse1');
+		$scope.remainingCourse2 = camForm.variableManager.fetchVariable('remainingCourse2');
+    });
+  </script>
+
+    <h2>Graduation Plan</h2>
+  <div class="row">
+           
+    <!-- Name -->
+    <div class="form-group">
+      <label for="inputName">Name</label>
+      <div class="controls"> 
+        <input class="form-control"
+               type="text"
+               value={{studentName}} 
+			   disabled />
+      </div>
+    </div>
+    <br>
+    
+    <!-- StudentNumber -->
+    <div class="form-group">
+      <label for="inputName">Student ID</label>
+      <div class="controls">
+        <input class="form-control"
+               type="text"
+               value={{studentId}} 
+			   disabled />
+      </div>
+    </div>
+    <br>
+    <!-- Master Program-->
+    <div class="form-group">
+      <label for="inputName">Master Program</label>
+      <div class="controls">
+        <input class="form-control"
+               type="text"
+               value={{masterProgram}}
+               disabled />
+      </div>
+    </div>
+	<hr></div>
+    <br>
+    <div class="row">
+    <!-- Graduation Topic-->
+    <div class="form-group">
+      <label for="inputName">Graduation Topic</label>
+      <div class="controls">
+        <input class="form-control"
+               type="text"
+               value={{graduationTopic}}
+                disabled  />
+      </div>
+    </div>
+    <br>
+    <!-- Problem Description-->
+    <div class="form-group">
+      <label for="inputName">Problem Description</label>
+      <div class="controls">
+        <input class="form-control"
+               type="text"
+               value={{problemDescription}}
+               disabled
+               />
+      </div>
+    </div>
+    <br>
+    
+    <!-- Graduation Period -->
+    <div class="form-group">
+      <label for="inputName">Graduation Period<br>
+      </label>
+      <label>from</label>
+      <div class="controls">
+        <input class="form-control"
+               type="Date"
+               value={{graduationStartDate}}
+			   disabled>
+               </div>
+        </div>
+    <br>
+    <!-- Graduation Date untill -->
+    <div class="form-group">
+      <label for="inputName">until</label>
+      <div class="controls">
+        <input class="form-control"
+               type="Date"
+               value={{graduationEndDate}}
+			   disabled>
+        </div>
+     </div>
+    <br>
+    <!-- fulltime student -->
+    <div class="form-group">
+      <label for="inputName">Full Time student<br>
+      </label>
+      <input type="radio" 
+      name="fulltime" 			  		  
+      value={fulltimeStudent}
+	  disabled>
+      Yes<br>
+      <input type="radio" 
+      name="fulltime" 
+      value={{parttimeStudent}}
+	  disabled>
+      No<br>
+      <div class="controls">
+        <input class="form-control"
+               type="text"
+               value={{parttimePercentage}}
+			   disabled					 
+               />
+      </div>
+    </div>
+    <br>
+    <!-- Project carried out-->
+    <div class="form-group">
+      <label for="inputName">Project carried out at</label>
+      <div class="controls">
+        <input class="form-control"
+               type="text"
+               value={{projectCarriedOut}}
+               />
+      </div>
+    </div>
+    <br>
+    
+    <!-- Project location-->
+    <div class="form-group">
+      <label for="inputName">Project location</label>
+      <div class="controls">
+        <input class="form-control"
+               type="text"
+               value={{projectLocation}}
+				disabled					 
+               />
+      </div>
+    </div>
+    <br>
+    
+    <!-- Phonenumber student-->
+    <div class="form-group">
+      <label for="inputName">Phone number</label>
+      <div class="controls">
+        <input class="form-control"
+               type="text"
+               value={{phoneNumberStudent}}
+               />
+      </div>
+    </div>
+    <hr></div>
+    <br>
+    
+    <div class="row">
+    <div class="col-xs-6">
+    <!-- responsible name-->
+    
+    <div class="form-group">
+      <label for="inputName"><b>Final Responsible</b><br>
+        <br>
+        Graduation Supervisor</label>
+      <div class="controls">
+        <input class="form-control"
+               type="text"
+               value={{graduationSupervisor}}
+			   disabled		
+               />
+      </div>
+    </div>
+    <br>
+    <!-- section-->
+    <div class="form-group">
+      <label for="inputName">TU/e Section</label>
+      <div class="controls">
+        <input class="form-control"
+               type="text"
+               value={{supervisorSection}}
+               disabled	
+               />
+      </div>
+    </div>
+    <br>
+    <!-- email-->
+    <div class="form-group">
+      <label for="inputName">E-mail Adress</label>
+      <div class="controls">
+        <input class="form-control"
+               type="email"
+               value={{supervisorMail}}
+			   disabled		
+               />
+      </div>
+    </div>
+    <br>
+    <!-- phonenumber -->
+    <div class="form-group">
+      <label for="inputName">Telephone Number</label>
+      <div class="controls">
+        <input class="form-control"
+               type="text"
+               value={{numberSupervisor}}
+               disabled	
+               />
+      </div>
+    </div>
+    <br>
+</div>
+   <div class="col-xs-6">
+    <!-- if other responsible-->
+    <div class="form-group">
+      <label for="inputName"><b>Person taking care of practical supervision, if not the same</b><br>
+        <br>
+        Graduation Supervisor</label>
+      <div class="controls">
+        <input class="form-control"
+               type="text"
+               value={{practicalSupervisor}}
+			   disabled
+               />
+      </div>
+    </div>
+    <br>
+    <!-- section-->
+    <div class="form-group">
+      <label for="inputName">TU/e Section</label>
+      <div class="controls">
+        <input class="form-control"
+               type="text"
+               value={{practicalSupervisorSection}}
+               disabled
+               />
+      </div>
+    </div>
+    <br>
+    <!-- email-->
+    <div class="form-group">
+      <label for="inputName">E-mail Adress</label>
+      <div class="controls">
+        <input class="form-control"
+               type="mail"
+               value={{practicalSupervisorMail}}
+               disabled
+               />
+      </div>
+    </div>
+    <br>
+    <!-- phonenumber -->
+    <div class="form-group">
+      <label for="inputName">Telephone Number</label>
+      <div class="controls">
+        <input class="form-control"
+               type="text"
+               value={{practicalSupervisorNumber}}
+               disabled
+               />
+      </div>
+    </div>
+		</div>
+	</div>
+    <br>
+    <div class="row">
+    <div clas="col-xs-6">
+    <!-- othersinvolved-->
+    <div class="form-group">
+      <label for="inputName"><b>Others involved</b><br>
+        <br>
+        Name</label>
+      <div class="controls">
+        <input class="form-control"
+               type="text"
+               value={{otherInvolvedName}}
+               disabled
+               />
+      </div>
+    </div>
+    <br>
+    <!-- affiliation-->
+    <div class="form-group">
+      <label for="inputName">Affiliation</label>
+      <div class="controls">
+        <input class="form-control"
+               type="text"
+               value={{otherAffiliation}}
+               disabled
+               />
+      </div>
+    </div>
+    <br>
+    <!-- Address-->
+    <div class="form-group">
+      <label for="inputName">Adress</label>
+      <div class="controls">
+        <input class="form-control"
+               type="text"
+               value={{otherAddress}}
+               disabled
+               />
+      </div>
+    </div>
+    <br>
+	</div>
+	 <div clas="col-xs-6">
+    <!-- othersinvolved-->
+    <div class="form-group">
+      <label for="inputName"><b>Others involved</b><br>
+        <br>
+        Name</label>
+      <div class="controls">
+        <input class="form-control"
+               type="text"
+               value={{otherInvolvedName2}}
+               disabled
+               />
+      </div>
+    </div>
+    <br>
+    <!-- affiliation-->
+    <div class="form-group">
+      <label for="inputName">Affiliation</label>
+      <div class="controls">
+        <input class="form-control"
+               type="text"
+               value={{otherAffiliation2}}
+               disabled
+               />
+      </div>
+    </div>
+    <br>
+    <!-- Adress-->
+    <div class="form-group">
+      <label for="inputName">Adress</label>
+      <div class="controls">
+        <input class="form-control"
+               type="text"
+               value={{otherAddress2}}
+               disabled
+               />
+      </div>
+    </div>
+    <br>
+	</div>
+	<hr></div>
+    
+        <!-- left over courses-->
+    <div class="form-group">
+      <label for="inputName">Programs units that are not completed at the start of the graduation phase (Program unit code, program unit name and credits):<br>
+        <br>
+        Course1</label>
+      <div class="controls">
+        <input class="form-control"
+               type="text"
+               value={{remainingCourse1}}
+               disabled					   
+               />
+		</div>
+      <br>
+      <label>Course2</label>
+      <div class="controls">
+        <input class="form-control"
+               type="text"
+               value={{remainingCourse2}}
+               disabled				   
+               />
+      </div>
+    </div>
+    <br>
+    <div>
+     <!-- sign form -->
+		 
+	<select required
+			cam-variable-name="supervisorSignGraduationPlan"
+			cam-variable-type="Boolean">
+	  <option value="true">Sign</option>
+	  <option value="false">Do not sign</option>
+	</select>
+      Supervisor Sign Study Program <br>
+      </div>  
+</form>
+
