@@ -175,73 +175,73 @@
 					<tr>
 						<td class="tg-7wxi">Results</td>
 						<td class="tg-7wxi"><label class="radio-inline"> <input
-								type="radio" name="results" value="unsatisfactory">
+								type="radio" name="results" cam-variable-name="resultsU" cam-variable-type="String" value="unsatisfactory">
 						</label></td>
 						<td class="tg-7wxi"><label class="radio-inline"> <input
-								type="radio" name="results" value="satisfactory">
+								type="radio" name="results" cam-variable-name="resultsS" cam-variable-type="String" value="satisfactory">
 						</label></td>
 						<td class="tg-7wxi"><label class="radio-inline"> <input
-								type="radio" name="results" value="good">
+								type="radio" name="results" cam-variable-name="resultsG" cam-variable-type="String" value="good">
 						</label></td>
 						<td class="tg-7wxi"><label class="radio-inline"> <input
-								type="radio" name="results" value="verygood">
+								type="radio" name="results" cam-variable-name="resultsUVG" cam-variable-type="String" value="verygood">
 						</label></td>
 						<td class="tg-7wxi"><label class="radio-inline"> <input
-								type="radio" name="results" value="excellent">
+								type="radio" name="results" cam-variable-name="resultsE" cam-variable-type="String" value="excellent">
 						</label></td>
 					</tr>
 					<tr>
 						<td class="tg-7wxi">Report</td>
 						<td class="tg-7wxi"><label class="radio-inline"> <input
-								type="radio" name="report" value="unsatisfactory">
+								type="radio" name="report" cam-variable-name="reportU" cam-variable-type="String" value="unsatisfactory">
 						</label></td>
 						<td class="tg-7wxi"><label class="radio-inline"> <input
-								type="radio" name="report" value="satisfactory">
+								type="radio" name="report" cam-variable-name="reportS" cam-variable-type="String" value="satisfactory">
 						</label></td>
 						<td class="tg-7wxi"><label class="radio-inline"> <input
-								type="radio" name="report" value="good">
+								type="radio" name="report" cam-variable-name="reportG" cam-variable-type="String" value="good">
 						</label></td>
 						<td class="tg-7wxi"><label class="radio-inline"> <input
-								type="radio" name="report" value="verygood">
+								type="radio" name="report" cam-variable-name="reportVG" cam-variable-type="String" value="verygood">
 						</label></td>
 						<td class="tg-7wxi"><label class="radio-inline"> <input
-								type="radio" name="report" value="excellent">
+								type="radio" name="report" cam-variable-name="reportE" cam-variable-type="String" value="excellent">
 						</label></td>
 					</tr>
 					<tr>
 						<td class="tg-7wxi">Presentation</td>
 						<td class="tg-7wxi"><label class="radio-inline"> <input
-								type="radio" name="presentation" value="unsatisfactory">
+								type="radio" name="presentation" cam-variable-name="presentationU" cam-variable-type="String" value="unsatisfactory">
 						</label></td>
 						<td class="tg-7wxi"><label class="radio-inline"> <input
-								type="radio" name="presentation" value="satisfactory">
+								type="radio" name="presentation" cam-variable-name="presentationS" cam-variable-type="String" value="satisfactory">
 						</label></td>
 						<td class="tg-7wxi"><label class="radio-inline"> <input
-								type="radio" name="presentation" value="good">
+								type="radio" name="presentation" cam-variable-name="presentationG" cam-variable-type="String" value="good">
 						</label></td>
 						<td class="tg-7wxi"><label class="radio-inline"> <input
-								type="radio" name="presentation" value="verygood">
+								type="radio" name="presentation" cam-variable-name="presentationVG" cam-variable-type="String" value="verygood">
 						</label></td>
 						<td class="tg-7wxi"><label class="radio-inline"> <input
-								type="radio" name="presentation" value="excellent">
+								type="radio" name="presentation" cam-variable-name="presentationE" cam-variable-type="String" value="excellent">
 						</label></td>
 					</tr>
 					<tr>
 						<td class="tg-7wxi">Defense</td>
 						<td class="tg-7wxi"><label class="radio-inline"> <input
-								type="radio" name="defense" value="unsatisfactory">
+								type="radio" name="defense" cam-variable-name="defenseU" cam-variable-type="String" value="unsatisfactory">
 						</label></td>
 						<td class="tg-7wxi"><label class="radio-inline"> <input
-								type="radio" name="defense" value="satisfactory">
+								type="radio" name="defense" cam-variable-name="defenseS" cam-variable-type="String" value="satisfactory">
 						</label></td>
 						<td class="tg-7wxi"><label class="radio-inline"> <input
-								type="radio" name="defense" value="good">
+								type="radio" name="defense" cam-variable-name="defenseG" cam-variable-type="String" value="good">
 						</label></td>
 						<td class="tg-7wxi"><label class="radio-inline"> <input
-								type="radio" name="defense" value="verygood">
+								type="radio" name="defense" cam-variable-name="defenseVG" cam-variable-type="String" value="verygood">
 						</label></td>
 						<td class="tg-7wxi"><label class="radio-inline"> <input
-								type="radio" name="defense" value="excellent">
+								type="radio" name="defense" cam-variable-name="defenseE" cam-variable-type="String" value="excellent">
 						</label></td>
 					</tr>
 					<tr>
@@ -274,14 +274,23 @@
 			<div class="form-group">
 				<label for="inputName">Grade</label>
 				<div class="controls">
-					<input  class="form-control" type="text"
+					<input required class="form-control" type="text"
 						cam-variable-name="graduationGrade" cam-variable-type="String" />
 				</div>
 			</div>
 			<br>
+			<!-- Comment -->
+				<div class="form-group">
+					<label for="inputName">Comment on Grade</label>
+					<div class="controls">
+						<input  class="form-control" type="text"
+							cam-variable-name="commentAssesmentForm" cam-variable-type="String"
+							 />
+					</div>
+				<br></div>
 			<!-- sign MSC assesmentform -->
 			<div>
-				<input  type="checkbox" name="signStudyProgram" value="True"
+				<input  required type="checkbox" name="signStudyProgram" value="True"
 					cam-variable-name="signMscAssesmentForm"
 					cam-variable-type="Boolean"> Signature Graduation
 				Supervisor<br>
@@ -292,14 +301,15 @@
 			<div class="form-group">
 				<label for="inputName">Date</label>
 				<div class="controls">
-					<input  class="form-control" type="Date"
+					<input required class="form-control" type="Date"
 						cam-variable-name="graduationDate" cam-variable-type="String" />
 				</div>
 			</div>
 			<br>
+			
 			<div>
 				<label for="inputName"> Graduation Project Completed<br></label>
-				<select  cam-variable-name="graduationProjectCompleted"
+				<select required cam-variable-name="graduationProjectCompleted"
 					cam-variable-type="Boolean">
 					<option value="true">Yes</option>
 					<option value="false">No</option>
