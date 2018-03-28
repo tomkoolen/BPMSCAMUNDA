@@ -1,27 +1,2 @@
 INDEX VERSION 1.130+C:\Users\s135509\Documents\GitHub\BPMSCAMUNDA\eclipse-workspace\.metadata\.plugins\org.eclipse.jdt.core
-1684288936.index
-1947982803.index
-1461812797.index
-1724914243.index
-3018319754.index
-3085535888.index
-882406864.index
-4260227392.index
-1136924560.index
 1287840038.index
-2458638520.index
-4019151435.index
-2735914900.index
-781057527.index
-3622332750.index
-1424541834.index
-562523494.index
-1483907655.index
-3150498658.index
-3507404000.index
-2418188310.index
-1139013652.index
-972367190.index
-2097484709.index
-2463736567.index
-3415539397.index

@@ -15,13 +15,14 @@
       <div class="form-group">
         <label for="inputName">Name</label>
         <div class="controls">
-          <input class="form-control"
+          <input required class="form-control"
                type="text"
                cam-variable-name="studentName"
                cam-variable-type="String"
                placeholder="Student Name"
                ng-minlength="2"
-               ng-maxlength="40" />
+               ng-maxlength="40"
+                />
         </div>
       </div>
       <br>
@@ -30,14 +31,16 @@
       <div class="form-group">
         <label for="inputName">Student ID</label>
         <div class="controls">
-          <input class="form-control"
+          <input required class="form-control"
                
                type="text"
                cam-variable-name="studentId"
                cam-variable-type="String"
                placeholder="1234567"
                ng-minlength="7"
-               ng-maxlength="7" />
+               ng-maxlength="7" 
+               disabled
+               />
         </div>
       </div>
       <br>
@@ -66,19 +69,15 @@
            name="masterStream"
            cam-variable-name="masterStream"
            cam-variable-type="String"
-           >
+           disabled>
             <option value="BPI" checked>BPI</option>
             <option value="IM">IM</option>
             <option value="Logistics">Logistics</option>
           </select>
         </div>
       </div>
-      
-      <!-- Custom validation message for select box -->
-      <div>
-        <p ng-if="fillSignStudyProgram.masterStream.$invalid" style="color: red"> Please select a master stream. </p>
-      </div>
     </div>
+    <br>
     <div class="col-xs-6"> 
       <!-- Supervisor -->
       <div class="form-group">
@@ -90,7 +89,8 @@
                cam-variable-type="String"
                placeholder="Name"
                ng-minlength="2"
-               ng-maxlength="40" />
+               ng-maxlength="40"
+                />
         </div>
       </div>
       <br>
@@ -128,7 +128,7 @@
       <div class="form-group">
         <label for="inputName">Bachelor</label>
         <div class="controls">
-          <input class="form-control"
+          <input required class="form-control"
                type="text"
                cam-variable-name="bachelorName"
                cam-variable-type="String"
@@ -142,13 +142,17 @@
       <div class="form-group">
         <label for="inputName">Date of Enrollment</label>
         <div class="controls">
-          <input class="form-control"
+          <input required class="form-control"
                type="Date"
                cam-variable-name="enrollmentDate"
                cam-variable-type="String"
                 />
         </div>
       </div>
+    </div>
+    <br>
+    <div class="row">
+    	* Only applicable if both Graduation Supervisor and Expertise Group are unknown
     </div>
     <hr>
   </div>
@@ -195,7 +199,7 @@
     <div class="form-group">
       <label for="inputName">BPI Variant</label>
       <div class="controls"> <!--select box -->
-        <select 
+        <select required
            class="form-control"
            name="bpiVariant"
            cam-variable-name="bpiVariant"
@@ -205,45 +209,54 @@
           <option value="processMining">Process Mining 1BM56 and 2IMI35 - Business intelligence and Introduction to process mining</option>
         </select>
       </div>
-    </div>
+    <br></div>
     <!-- Elective 1 -->
     <div class="form-group">
       <label for="inputName">Elective 1</label>
       <div class="controls">
-        <select 
+        <input required
            class="form-control"
            name="bpiVariant"
            cam-variable-name="elective1"
            cam-variable-type="String"
            >
-          <option value="elective" checked>A</option>
-        </select>
-      </div>
-    </div>
+         </div>
+    <br></div>
     <!-- Elective 2 -->
     <div class="form-group">
       <label for="inputName">Elective 2</label>
       <div class="controls">
-        <select 
+        <input required 
            class="form-control"
            name="bpiVariant"
            cam-variable-name="elective2"
            cam-variable-type="String"
            >
-          <option value="elective" checked>A</option>
-        </select>
-      </div>
+                </div>
     </div>
-    <br>
+    <hr>
+    	<!-- Comment Box -->
+       <div class="form-group">
+        <label for="InputName">Comment </label>
+        <div class="controls">
+          <input class="form-control"
+               type="text"
+               name="commentStudyProgram"
+               cam-variable-name="commentStudyProgram"
+               cam-variable-type="String"
+                />
+        </div>
+        <br>
     <!-- sign form -->
     <div>
-      <input type="checkbox" 
+      <input required type="checkbox" 
       name="signStudyProgram" 
       cam-variable-name="signStudyProgram"
       cam-variable-type="Boolean">
       Sign Study Program<br>
     </div>
   <hr></div>
+	</div>
 </form>
 </body>
 </html>

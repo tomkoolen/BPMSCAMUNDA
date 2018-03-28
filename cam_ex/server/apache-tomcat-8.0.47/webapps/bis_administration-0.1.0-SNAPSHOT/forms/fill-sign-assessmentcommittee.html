@@ -15,7 +15,8 @@
                cam-variable-type="String"
                placeholder="Student Name"
                ng-minlength="2"
-               ng-maxlength="40" />
+               ng-maxlength="40" 
+               disabled/>
         </div>
       </div>
 
@@ -30,7 +31,8 @@
                cam-variable-type="String"
                placeholder="1234567"
                ng-minlength="7"
-               ng-maxlength="7" />
+               ng-maxlength="7" 
+               disabled/>
         </div>
       </div>
 
@@ -44,46 +46,48 @@
 
 			<!-- Date Selection -->
 			<div class="form-group">
-				<label for="InputName">Date presentation and defense thesis</label>
-				<div class="controls">
-					<input required type="date" 
-					class="form-control"
-					name="presentationDate" 
-					cam-variable-name="presentationDate"
-					cam-variable-type="String">
-				</div>
-			</div>
+        <label for="inputName">Presentation Date</label>
+        <div class="controls">
+          <input required class="form-control"
+               type="Date"
+               cam-variable-name="presentationDate"
+               cam-variable-type="String"
+                />
+        </div>
+      </div>
 		</div>
 	</div>
 	<div class="row">
 		<hr>
 	</div>
 	<div class="row">
+					<h3>Members of committee</h3>
+	</div>
+			<div class="row">
 		<div class="col-xs-6">
-			<h3>Members of committee</h3>
 			<!-- Graduation Advisor -->
 			<div class="form-group">
 				<label for="InputName">Graduation Supervisor</label>
 				<div class="controls">
 					<input class="form-control" name="graduationSupervisor"
-						placeholder="John Doe" cam-variable-name="graduationAdvisor"
-						cam-variable-type="String" required>
+						placeholder="John Doe" cam-variable-name="graduationSupervisor"
+						cam-variable-type="String" disabled >
 				</div>
 			</div>
 			<!-- Tutor/Additional Member -->
 			<div class="form-group">
 				<label for="InputName">Tutor/Additional Member**</label>
 				<div class="controls">
-					<input class="form-control" name="tutorAdditionalMember"
+					<input required class="form-control" name="tutorAdditionalMember"
 						placeholder="John Doe" cam-variable-name="tutorAdditionalMember"
-						cam-variable-type="String" required>
+						cam-variable-type="String" >
 				</div>
 			</div>
 			<!-- Voting Member -->
 			<div class="form-group">
 				<label for="InputName">Voting member</label>
 				<div class="controls">
-					<input class="form-control" name="votingMember"
+					<input required class="form-control" name="votingMember"
 						placeholder="John Doe" cam-variable-name="votingMember"
 						cam-variable-type="String">
 				</div>
@@ -160,12 +164,22 @@
 	</div>
 	<div class="row">
 		<div>
+		<!-- comment Box -->
+			<div class="form-group">
+				<label for="InputName">Comment</label>
+				<div class="controls">
+					<input class="form-control" name="commentAssessmentCommittee"
+						cam-variable-name="commenAssessmentCommittee"
+						cam-variable-type="String">
+				</div>
+			<br></div>
 			<!-- sign form -->
-			<input type="checkbox" name="signStudentGraduationProgram"
-				value="signStudentGraduationProgram"
+			<input required 
+				type="checkbox" name="signedAssessmentCommitteeForm"
+				value="true"
 				cam-variable-name="signedAssessmentCommitteeForm"
-				cam-variable-type="Boolean" required> Confirm Assessment
-			Committee<br>
+				cam-variable-type="Boolean"> 
+				Sign by Assessment Committee<br>
 		</div>
 	</div>
 </form>

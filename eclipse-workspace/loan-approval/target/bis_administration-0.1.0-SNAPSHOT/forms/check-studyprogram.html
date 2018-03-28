@@ -22,7 +22,8 @@
                cam-variable-type="String"
                placeholder="Student Name"
                ng-minlength="2"
-               ng-maxlength="40" />
+               ng-maxlength="40"
+		 />
         </div>
       </div>
       <br>
@@ -38,7 +39,8 @@
                cam-variable-type="String"
                placeholder="1234567"
                ng-minlength="7"
-               ng-maxlength="7" />
+               ng-maxlength="7"
+		/>
         </div>
       </div>
       <br>
@@ -67,19 +69,15 @@
            name="masterStream"
            cam-variable-name="masterStream"
            cam-variable-type="String"
-           >
+           disabled>
             <option value="BPI" checked>BPI</option>
             <option value="IM">IM</option>
             <option value="Logistics">Logistics</option>
           </select>
         </div>
       </div>
-      
-      <!-- Custom validation message for select box -->
-      <div>
-        <p ng-if="fillSignStudyProgram.masterStream.$invalid" style="color: red"> Please select a master stream. </p>
-      </div>
-    </div>
+      <br>
+     
     <div class="col-xs-6"> 
       <!-- Supervisor -->
       <div class="form-group">
@@ -91,7 +89,8 @@
                cam-variable-type="String"
                placeholder="Name"
                ng-minlength="2"
-               ng-maxlength="40" />
+               ng-maxlength="40"
+		 />
         </div>
       </div>
       <br>
@@ -105,7 +104,8 @@
                cam-variable-type="String"
                placeholder="Name"
                ng-minlength="2"
-               ng-maxlength="40" />
+               ng-maxlength="40"
+		 />
         </div>
       </div>
       <br>
@@ -120,7 +120,8 @@
                cam-variable-type="String"
                placeholder="Information Systems"
                ng-minlength="2"
-               ng-maxlength="40" />
+               ng-maxlength="40"
+		 />
         </div>
       </div>
       <br>
@@ -135,7 +136,8 @@
                cam-variable-type="String"
                placeholder="Web Science"
                ng-minlength="2"
-               ng-maxlength="40" />
+               ng-maxlength="40"
+		 />
         </div>
       </div>
       <br>
@@ -153,6 +155,7 @@
     </div>
     <hr>
   </div>
+	</div>
   <br>
   <div class="row">
     <div>
@@ -173,7 +176,7 @@
         </tr>
         <tr>
           <td class="tg-le8v">2IMC00</td>
-          <td class="tg-le8v">Master Projec</td>
+          <td class="tg-le8v">Master Project</td>
           <td class="tg-le8v">30</td>
           <td class="tg-le8v">Graduation Project</td>
         </tr>
@@ -206,38 +209,61 @@
           <option value="processMining">Process Mining 1BM56 and 2IMI35 - Business intelligence and Introduction to process mining</option>
         </select>
       </div>
-    </div>
+    <br></div>
     <!-- Elective 1 -->
     <div class="form-group">
       <label for="inputName">Elective 1</label>
       <div class="controls">
-        <select 
+        <input 
            class="form-control"
            name="bpiVariant"
            cam-variable-name="elective1"
            cam-variable-type="String"
            >
-          <option value="elective" checked>A</option>
-        </select>
       </div>
-    </div>
+    <br></div>
     <!-- Elective 2 -->
     <div class="form-group">
       <label for="inputName">Elective 2</label>
       <div class="controls">
-        <select 
+        <input 
            class="form-control"
            name="bpiVariant"
            cam-variable-name="elective2"
            cam-variable-type="String"
            >
-          <option value="elective" checked>A</option>
-        </select>
+          
       </div>
     </div>
     <br>
+    <!-- Comment Box-->
+    <div class="form-group">
+        <label for="InputName">Comment </label>
+        <div class="controls">
+          <input class="form-control"
+               type="text"
+               name="commentStudyProgram"
+               cam-variable-name="commentStudyProgram"
+               cam-variable-type="String"
+                />
+        </div>
+      <br></div>
+       
+        <!-- Hear Student-->
+    <div class="form-group">
+        <label for="InputName">Student has been heard </label>
+        <div class="controls">
+          <input class="form-control"
+               type="text"
+               name="wantsToBeHeard"
+               cam-variable-name="wantsToBeHeard"
+               cam-variable-type="String"
+                disabled/>
+        </div>
+      <br></div>
     <!-- sign form -->
     <div>
+    <label>Evaluate Study Program<br></label>
 	<select required
 			cam-variable-name="StudyProgramApproved"
 			cam-variable-type="String">
@@ -245,7 +271,7 @@
 	  <option value="1">Study Program Disapproved, student can be heard</option>
 	  <option value="0">Study Program Disapproved, student can not be heard</option>
 	</select>
-      Supervisor Sign Study Program <br>
+      
 	  <br>
       </div>
   <hr></div>
