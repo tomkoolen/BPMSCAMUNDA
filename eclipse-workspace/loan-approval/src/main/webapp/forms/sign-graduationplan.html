@@ -53,7 +53,7 @@
                type="text"
                cam-variable-name="graduationTopic"
                cam-variable-type="String"
-                    />
+                disabled />
       </div>
     </div>
     <br>
@@ -66,7 +66,7 @@
                type="text"
                cam-variable-name="problemDescription"
                cam-variable-type="String"
-               />
+               disabled />
       </div>
     </div>
     <br>
@@ -82,7 +82,8 @@
                type="Date"
                cam-variable-name="graduationStartDate"
                cam-variable-type="String"
-               placeholder="yyyy-mm-dd">
+               placeholder="yyyy-mm-dd"
+			   disabled >
                </div>
         </div>
     <br>
@@ -95,7 +96,8 @@
                type="Date"
                cam-variable-name="graduationEndDate"
                cam-variable-type="String"
-               placeholder="yyyy-mm-dd">
+               placeholder="yyyy-mm-dd"
+			   disabled >
         </div>
      </div>
     <br>
@@ -105,7 +107,8 @@
       	<select required
 			disabled
 			cam-variable-name="fulltimeStudent"
-			cam-variable-type="Boolean">
+			cam-variable-type="Boolean"
+			disabled >
 	  <option value="true">Yes</option>
 	  <option value="false">No</option>
 	</select>
@@ -117,7 +120,7 @@
                cam-variable-name="parttimePercentage"
                cam-variable-type="String"
                placeholder="parttime%"
-               />
+              disabled />
       </div>
     </div>
     <br>
@@ -131,7 +134,7 @@
                cam-variable-name="projectCarriedOut"
                cam-variable-type="String"
                placeholder="name of company"
-               />
+               disabled />
       </div>
     </div>
     <br>
@@ -146,7 +149,7 @@
                cam-variable-name="projectLocation"
                cam-variable-type="String"
                placeholder="Eindhoven"
-               />
+               disabled />
       </div>
     </div>
     <br>
@@ -163,7 +166,7 @@
                placeholder="0612345678"
                ng-minlength="10"
                ng-maxlength="10"               
-               />
+               disabled />
       </div>
     </div>
     <hr></div>
@@ -184,7 +187,7 @@
                cam-variable-name="graduationSupervisor"
                cam-variable-type="String"
                placeholder="Name"
-               />
+              disabled />
       </div>
     </div>
     <br>
@@ -198,7 +201,7 @@
                cam-variable-name="supervisorSection"
                cam-variable-type="String"
                placeholder="section"
-               />
+               disabled />
       </div>
     </div>
     <br>
@@ -212,7 +215,7 @@
                cam-variable-name="supervisorMail"
                cam-variable-type="String"
                placeholder="x.lastname@tue.nl"
-               />
+               disabled />
       </div>
     </div>
     <br>
@@ -226,7 +229,7 @@
                cam-variable-name="numberSupervisor"
                cam-variable-type="String"
                placeholder="040-2222"
-               />
+               disabled />
       </div>
     </div>
     <br>
@@ -243,7 +246,7 @@
                cam-variable-name="practicalSupervisor"
                cam-variable-type="String"
                placeholder="Name"
-               />
+               disabled />
       </div>
     </div>
     <br>
@@ -256,7 +259,7 @@
                cam-variable-name="practicalSupervisorSection"
                cam-variable-type="String"
                placeholder="section"
-               />
+               disabled />
       </div>
     </div>
     <br>
@@ -269,7 +272,7 @@
                cam-variable-name="practicalSupervisorMail"
                cam-variable-type="String"
                placeholder="x.lastname@tue.nl"
-               />
+               disabled />
       </div>
     </div>
     <br>
@@ -282,7 +285,7 @@
                cam-variable-name="practicalSupervisorNumber"
                cam-variable-type="String"
                placeholder="040-2222"
-               />
+               disabled />
       </div>
     </div>
 		</div>
@@ -301,7 +304,7 @@
                cam-variable-name="otherInvolvedName"
                cam-variable-type="String"
                placeholder="Name"
-               />
+               disabled />
       </div>
     </div>
     <br>
@@ -313,7 +316,7 @@
                type="text"
                cam-variable-name="otherAffiliation"
                cam-variable-type="String"
-               />
+               disabled />
       </div>
     </div>
     <br>
@@ -326,7 +329,7 @@
                cam-variable-name="otherAddress"
                cam-variable-type="String"
                placeholder="adress"
-               />
+               disabled />
       </div>
     </div>
     <br>
@@ -343,7 +346,7 @@
                cam-variable-name="otherInvolvedName2"
                cam-variable-type="String"
                placeholder="Name"
-               />
+               disabled />
       </div>
     </div>
     <br>
@@ -355,7 +358,7 @@
                type="text"
                cam-variable-name="otherAffiliation2"
                cam-variable-type="String"
-               />
+               disabled />
       </div>
     </div>
     <br>
@@ -368,7 +371,7 @@
                cam-variable-name="otherAddress2"
                cam-variable-type="String"
                placeholder="adress"
-               />
+               disabled />
       </div>
     </div>
     <br>
@@ -386,7 +389,7 @@
                cam-variable-name="remainingCourse1"
                cam-variable-type="String"
                placeholder="code,name,ECTS"
-               />
+               disabled />
 		</div>
       <br>
       <label>Course2</label>
@@ -396,7 +399,7 @@
                cam-variable-name="remainingCourse2"
                cam-variable-type="String"
                placeholder="code,name,ECTS"
-               />
+               disabled />
       </div>
     </div>
     <br>
@@ -404,7 +407,8 @@
      <!-- sign form -->
 	<select required
 			cam-variable-name="supervisorSignGraduationPlan"
-			cam-variable-type="Boolean">
+			cam-variable-type="Boolean"
+			>
 	  <option value="true">Sign</option>
 	  <option value="false">Do not sign</option>
 	</select>
