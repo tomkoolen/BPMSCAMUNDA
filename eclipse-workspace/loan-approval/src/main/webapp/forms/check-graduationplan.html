@@ -1,4 +1,4 @@
-<form name="fill-sign-graduationplan">
+<form name="check-graduationplan">
 	<h2>Graduation Plan</h2>
 	<div class="row">
 
@@ -79,13 +79,14 @@
 		<br>
 		<!-- fulltime student -->
 		<div class="form-group">
-			<label for="inputName">Full Time student<br> <select
-				required cam-variable-name="fulltimeStudent"
+			<label for="inputName">Full Time student<br></label>
+			 <input
+				required 
+				type="text"
+				cam-variable-name="fulltimeStudent"
 				cam-variable-type="Boolean"
 				disabled />
-					<option value="true">Yes</option>
-					<option value="false">No</option>
-			</select> <br>
+					 <br>
 				<div class="controls">
 					<input class="form-control" type="text"
 						cam-variable-name="parttimePercentage" cam-variable-type="String"
