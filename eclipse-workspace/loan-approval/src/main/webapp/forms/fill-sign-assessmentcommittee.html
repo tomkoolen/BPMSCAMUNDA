@@ -15,7 +15,8 @@
                cam-variable-type="String"
                placeholder="Student Name"
                ng-minlength="2"
-               ng-maxlength="40" />
+               ng-maxlength="40" 
+               disabled/>
         </div>
       </div>
 
@@ -30,7 +31,8 @@
                cam-variable-type="String"
                placeholder="1234567"
                ng-minlength="7"
-               ng-maxlength="7" />
+               ng-maxlength="7" 
+               disabled/>
         </div>
       </div>
 
@@ -46,7 +48,7 @@
 			<div class="form-group">
 				<label for="InputName">Date presentation and defense thesis</label>
 				<div class="controls">
-					<input required type="date" 
+					<input required type="Date" 
 					class="form-control"
 					name="presentationDate" 
 					cam-variable-name="presentationDate"
@@ -67,23 +69,23 @@
 				<div class="controls">
 					<input class="form-control" name="graduationSupervisor"
 						placeholder="John Doe" cam-variable-name="graduationSupervisor"
-						cam-variable-type="String" required>
+						cam-variable-type="String" disabled >
 				</div>
 			</div>
 			<!-- Tutor/Additional Member -->
 			<div class="form-group">
 				<label for="InputName">Tutor/Additional Member**</label>
 				<div class="controls">
-					<input class="form-control" name="tutorAdditionalMember"
+					<input required class="form-control" name="tutorAdditionalMember"
 						placeholder="John Doe" cam-variable-name="tutorAdditionalMember"
-						cam-variable-type="String" required>
+						cam-variable-type="String" >
 				</div>
 			</div>
 			<!-- Voting Member -->
 			<div class="form-group">
 				<label for="InputName">Voting member</label>
 				<div class="controls">
-					<input class="form-control" name="votingMember"
+					<input required class="form-control" name="votingMember"
 						placeholder="John Doe" cam-variable-name="votingMember"
 						cam-variable-type="String">
 				</div>
