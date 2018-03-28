@@ -248,8 +248,22 @@
                 />
         </div>
       <br></div>
+       
+        <!-- Hear Student-->
+    <div class="form-group">
+        <label for="InputName">Student has been heard </label>
+        <div class="controls">
+          <input class="form-control"
+               type="text"
+               name="wantsToBeHeard"
+               cam-variable-name="wantsToBeHeard"
+               cam-variable-type="String"
+                disabled/>
+        </div>
+      <br></div>
     <!-- sign form -->
     <div>
+    <label>Evaluate Study Program<br></label>
 	<select required
 			cam-variable-name="StudyProgramApproved"
 			cam-variable-type="String">
@@ -257,7 +271,7 @@
 	  <option value="1">Study Program Disapproved, student can be heard</option>
 	  <option value="0">Study Program Disapproved, student can not be heard</option>
 	</select>
-      Supervisor Sign Study Program <br>
+      
 	  <br>
       </div>
   <hr></div>
