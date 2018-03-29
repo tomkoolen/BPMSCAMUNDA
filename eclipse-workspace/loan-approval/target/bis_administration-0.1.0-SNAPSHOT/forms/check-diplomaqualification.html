@@ -6,7 +6,38 @@
     <center>
       <h2>Diploma Qualification</h2>
     </center>
-  
+        <!-- Name -->
+      <div class="form-group">
+        <label for="inputName">Name</label>
+        <div class="controls">
+          <input class="form-control"
+               
+               type="text"
+               cam-variable-name="studentName"
+               cam-variable-type="String"
+               placeholder="Student Name"
+               ng-minlength="2"
+               ng-maxlength="40"
+		 disabled />
+        </div>
+      </div>
+      <br>
+      
+      <!-- StudentNumber -->
+      <div class="form-group">
+        <label for="inputName">Student ID</label>
+        <div class="controls">
+          <input class="form-control"
+               
+               type="text"
+               cam-variable-name="studentId"
+               cam-variable-type="String"
+               placeholder="1234567"
+               ng-minlength="7"
+               ng-maxlength="7"
+		disabled />
+        </div>
+      </div>
       
       <!-- Finished Project -->
       <div class="form-group">
@@ -32,15 +63,31 @@
            disabled>
         </div>
       </div>
-      <br>
+      <br>    
+	  
+	  <!-- Approved with courses next to graduation -->
+      <div class="form-group">
+        <label for="InputName">Graduation Plan Approved with Courses next to Graduation Project</label>
+        <div class="controls">
+          <input
+           class="form-control"
+           type="text"
+           cam-variable-name="approvedWithCoursesNextToGraduation"
+           cam-variable-type = "Boolean" 
+           disabled>
+        </div>
+      </div>
+      <br>  
+	  
       
  <div>
   <label for="inputName"> Student Qualified for Diploma<br></label>
   <select required
 			cam-variable-name="qualifiedForDiploma"
-			cam-variable-type="Boolean">
-	  <option value="true">Yes</option>
-	  <option value="false">No</option>
+			cam-variable-type="String">
+	  <option value="0">Yes</option>
+	  <option value="1">No, because of Unfinished Course(s)</option>
+	  <option value="2">No, because of Failed Graduation Project</option>
 	</select>
 	  <br></div> 
     <br>

@@ -377,7 +377,7 @@
     
         <!-- left over courses-->
     <div class="form-group">
-      <label for="inputName">Programs units that are not completed at the start of the graduation phase (Program unit code, program unit name and credits):<br>
+      <label for="inputName">Programs units that will be completed during the graduation project (Program unit code, program unit name and credits):<br>
         <br>
         Course1</label>
       <div class="controls">
@@ -399,6 +399,16 @@
                disabled />
       </div>
     </div>
+    <br>
+			<!-- say if student still is waiting for results for some courses-->
+      <label>Awaiting examination results for course(s) and expected to receive them within 3 weeks</label>
+	  <div class="controls">
+        <input class="form-control"
+               type="text"
+               cam-variable-name="waitingForResults"
+               cam-variable-type="Boolean"
+               disabled />
+      </div>
     <br>
     <div>
      <!-- sign form -->

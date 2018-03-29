@@ -6,7 +6,7 @@
 		<div class="form-group">
 			<label for="inputName">Name</label>
 			<div class="controls">
-				<input required class="form-control" type="text"
+				<input class="form-control" type="text"
 					cam-variable-name="studentName" cam-variable-type="String" disabled />
 			</div>
 		</div>
@@ -16,7 +16,7 @@
 		<div class="form-group">
 			<label for="inputName">Student ID</label>
 			<div class="controls">
-				<input required class="form-control" type="text"
+				<input class="form-control" type="text"
 					cam-variable-name="studentId" cam-variable-type="String" disabled />
 			</div>
 		</div>
@@ -25,7 +25,7 @@
 		<div class="form-group">
 			<label for="inputName">Master Program</label>
 			<div class="controls">
-				<input required class="form-control" type="text"
+				<input class="form-control" type="text"
 					cam-variable-name="masterProgram" cam-variable-type="String"
 					disabled />
 			</div>
@@ -38,7 +38,7 @@
 		<div class="form-group">
 			<label for="inputName">Graduation Topic</label>
 			<div class="controls">
-				<input required class="form-control" type="text"
+				<input class="form-control" type="text"
 					cam-variable-name="graduationTopic" cam-variable-type="String"
 					disabled />
 			</div>
@@ -48,7 +48,7 @@
 		<div class="form-group">
 			<label for="inputName">Problem Description</label>
 			<div class="controls">
-				<input required class="form-control" type="text"
+				<input class="form-control" type="text"
 					cam-variable-name="problemDescription" cam-variable-type="String"
 					disabled />
 			</div>
@@ -60,7 +60,7 @@
 			<label for="inputName">Graduation Period<br>
 			</label> <label>from</label>
 			<div class="controls">
-				<input required class="form-control" type="Date"
+				<input class="form-control" type="Date"
 					cam-variable-name="graduationStartDate" cam-variable-type="String"
 					placeholder="yyyy-mm-dd" 
 					disabled />
@@ -71,7 +71,7 @@
 		<div class="form-group">
 			<label for="inputName">until</label>
 			<div class="controls">
-				<input required class="form-control" type="Date"
+				<input  class="form-control" type="Date"
 					cam-variable-name="graduationEndDate" cam-variable-type="String"
 					placeholder="yyyy-mm-dd" disabled />
 			</div>
@@ -81,7 +81,6 @@
 		<div class="form-group">
 			<label for="inputName">Full Time student<br></label>
 			 <input
-				required 
 				type="text"
 				cam-variable-name="fulltimeStudent"
 				cam-variable-type="Boolean"
@@ -99,7 +98,7 @@
 		<div class="form-group">
 			<label for="inputName">Project carried out at</label>
 			<div class="controls">
-				<input required class="form-control" type="text"
+				<input class="form-control" type="text"
 					cam-variable-name="projectCarriedOut" cam-variable-type="String"
 					placeholder="name of company" 
 					disabled />
@@ -111,7 +110,7 @@
 		<div class="form-group">
 			<label for="inputName">Project location</label>
 			<div class="controls">
-				<input required class="form-control" type="text"
+				<input class="form-control" type="text"
 					cam-variable-name="projectLocation" cam-variable-type="String"
 					placeholder="Eindhoven" 
 					disabled />
@@ -123,7 +122,7 @@
 		<div class="form-group">
 			<label for="inputName">Phone number</label>
 			<div class="controls">
-				<input required class="form-control" type="text"
+				<input class="form-control" type="text"
 					cam-variable-name="phoneNumberStudent" cam-variable-type="String"
 					placeholder="0612345678" ng-minlength="10" ng-maxlength="10"
 					disabled />
@@ -141,7 +140,7 @@
 				<label for="inputName"><b>Final Responsible</b><br> <br>
 					Graduation Supervisor</label>
 				<div class="controls">
-					<input required class="form-control" type="text"
+					<input class="form-control" type="text"
 						cam-variable-name="graduationSupervisor"
 						cam-variable-type="String" placeholder="Name" disabled />
 				</div>
@@ -151,7 +150,7 @@
 			<div class="form-group">
 				<label for="inputName">TU/e Section</label>
 				<div class="controls">
-					<input required class="form-control" type="text"
+					<input class="form-control" type="text"
 						cam-variable-name="supervisorSection" cam-variable-type="String"
 						placeholder="section" disabled />
 				</div>
@@ -161,7 +160,7 @@
 			<div class="form-group">
 				<label for="inputName">E-mail Adress</label>
 				<div class="controls">
-					<input required class="form-control" type="email"
+					<input class="form-control" type="email"
 						cam-variable-name="supervisorMail" cam-variable-type="String"
 						placeholder="x.lastname@tue.nl" disabled />
 				</div>
@@ -171,7 +170,7 @@
 			<div class="form-group">
 				<label for="inputName">Telephone Number</label>
 				<div class="controls">
-					<input required class="form-control" type="text"
+					<input class="form-control" type="text"
 						cam-variable-name="numberSupervisor" cam-variable-type="String"
 						placeholder="040-2222" disabled />
 				</div>
@@ -296,9 +295,8 @@
 
 	<!-- left over courses-->
 	<div class="form-group">
-		<label for="inputName">Programs units that are not completed
-			at the start of the graduation phase (Program unit code, program unit
-			name and credits):<br> <br> Course1
+		<label for="inputName">Programs units that will be completed during the graduation project (Program unit code, program unit name and credits):<br> 
+		<br> Course1
 		</label>
 		<div class="controls">
 			<input class="form-control" type="text"
@@ -313,6 +311,16 @@
 		</div>
 	</div>
 	<br>
+			<!-- say if student still is waiting for results for some courses-->
+      <label>Awaiting examination results for course(s) and expected to receive them within 3 weeks</label>
+	  <div class="controls">
+        <input class="form-control"
+               type="text"
+               cam-variable-name="waitingForResults"
+               cam-variable-type="Boolean"
+               disabled />
+      </div>
+    <br>
 	<div>
 		<!-- sign form -->
 		<label>Signed by student</label>
@@ -329,14 +337,32 @@
 		</div>
 
 		<br>
-
+		
 		<div>
 			<!-- sign form -->
 			<select required cam-variable-name="graduationPlanApproved"
-				cam-variable-type="Boolean">
+				cam-variable-type="Boolean" >
 				<option value="true">Approve</option>
 				<option value="false">Disapprove</option>
 			</select> Examination Committee Approve Graduation Plan <br> <br>
+		</div>
+		<div>
+			<label for="approvedWithCoursesNextToGraduation">Approve with Courses next to Graduation Project</label>
+			<input
+				type="checkbox" 
+				name="approvedWithCoursesNextToGraduation" 
+			  value="true"
+			  cam-variable-name="approvedWithCoursesNextToGraduation"
+			  cam-variable-type="Boolean">
+		</div>
+		<div>
+			<label for="approvedWithAwaitingResults">Approve while Awaiting Examination Results</label>
+			<input
+				type="checkbox" 
+				name="approvedWithAwaitingResults" 
+			  value="true"
+			  cam-variable-name="approvedWithAwaitingResults"
+			  cam-variable-type="Boolean">
 		</div>
 
 		<div class="form-group">

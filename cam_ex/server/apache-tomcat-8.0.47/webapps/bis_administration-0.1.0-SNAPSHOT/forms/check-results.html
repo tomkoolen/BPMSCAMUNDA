@@ -1,0 +1,46 @@
+<form name="check-results">
+      <!-- Name -->
+      <div class="form-group">
+        <label for="inputName">Name</label>
+        <div class="controls">
+          <input class="form-control"
+               
+               type="text"
+               cam-variable-name="studentName"
+               cam-variable-type="String"
+               placeholder="Student Name"
+               ng-minlength="2"
+               ng-maxlength="40"
+		 disable />
+        </div>
+      </div>
+      <br>
+      
+      <!-- StudentNumber -->
+      <div class="form-group">
+        <label for="inputName">Student ID</label>
+        <div class="controls">
+          <input class="form-control"
+               
+               type="text"
+               cam-variable-name="studentId"
+               cam-variable-type="String"
+               placeholder="1234567"
+               ng-minlength="7"
+               ng-maxlength="7"
+		disable />
+        </div>
+      </div>
+
+  <div class="form-group">
+    <label for="check-results">Did the student pass the remaining examinations?</label>
+    <select class="form-control"
+           cam-variable-type="Boolean"
+           cam-variable-name="passedRemaining"
+           name ="passedRemaining">
+     <option value="true"> Yes </option>
+     <option value="false"> No </option>
+     <option></option>
+     </select>
+  </div>
+</form>
