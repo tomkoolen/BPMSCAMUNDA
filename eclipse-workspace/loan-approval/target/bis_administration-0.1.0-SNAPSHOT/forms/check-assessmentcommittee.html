@@ -4,37 +4,30 @@
 		<div class="col-xs-6">
 
 			<!-- Student Name -->
-			
-      <div class="form-group">
-        <label for="inputName">Name</label>
-        <div class="controls">
-          <input class="form-control"
-               type="text"
-               cam-variable-name="studentName"
-               cam-variable-type="String"
-               placeholder="Student Name"
-               ng-minlength="2"
-               ng-maxlength="40" 
-               disabled/>
-        </div>
-      </div>
+
+			<div class="form-group">
+				<label for="inputName">Name</label>
+				<div class="controls">
+					<input class="form-control" type="text"
+						cam-variable-name="studentName" cam-variable-type="String"
+						placeholder="Student Name" ng-minlength="2" ng-maxlength="40"
+						disabled />
+				</div>
+			</div>
 
 			<!-- ID -->
 			<div class="form-group">
-        <label for="inputName">Student ID</label>
-        <div class="controls">
-          <input  class="form-control"
-               type="text"
-               cam-variable-name="studentId"
-               cam-variable-type="String"
-               disabled />
-        </div>
-      </div>
+				<label for="inputName">Student ID</label>
+				<div class="controls">
+					<input class="form-control" type="text"
+						cam-variable-name="studentId" cam-variable-type="String" disabled />
+				</div>
+			</div>
 			<!-- MSC Program -->
 			<div class="form-group">
 				<label for="InputName">MSc Program</label>
 				<div class="controls">
-					<input  class="form-control" name="MScProgram" value="BIS" disabled>
+					<input class="form-control" name="MScProgram" value="BIS" disabled>
 				</div>
 			</div>
 
@@ -42,9 +35,9 @@
 			<div class="form-group">
 				<label for="InputName">Date presentation and defense thesis</label>
 				<div class="controls">
-					<input  type="date" class="form-control"
-						name="presentationDate" cam-variable-name = "presentationDate" 
-						cam-variable-type="String" disabled>
+					<input type="date" class="form-control" name="presentationDate"
+						cam-variable-name="presentationDate" cam-variable-type="String"
+						disabled>
 				</div>
 			</div>
 		</div>
@@ -52,9 +45,9 @@
 	<div class="row">
 		<hr>
 	</div>
+	<h3>Members of committee</h3>
 	<div class="row">
 		<div class="col-xs-6">
-			<h3>Members of committee</h3>
 			<!-- Graduation Advisor -->
 			<div class="form-group">
 				<label for="InputName">Graduation Supervisor</label>
@@ -68,7 +61,7 @@
 			<div class="form-group">
 				<label for="InputName">Tutor/Additional Member**</label>
 				<div class="controls">
-					<input  class="form-control" name="tutorAdditionalMember"
+					<input class="form-control" name="tutorAdditionalMember"
 						placeholder="John Doe" cam-variable-name="tutorAdditionalMember"
 						cam-variable-type="String" disabled>
 				</div>
@@ -86,7 +79,7 @@
 			<div class="form-group">
 				<label for="InputName">Advisor/Non voting member</label>
 				<div class="controls">
-					<input  class="form-control" name="advisorMember"
+					<input class="form-control" name="advisorMember"
 						placeholder="John Doe" cam-variable-name="advisorMember"
 						cam-variable-type="String" disabled>
 				</div>
@@ -97,8 +90,7 @@
 			<div class="form-group">
 				<label for="selectLoanType">Department</label>
 				<div class="controls">
-					<input  class="form-control"
-						name="departmentGraduationAdvisor"
+					<input class="form-control" name="departmentGraduationAdvisor"
 						cam-variable-name="departmentGraduationAdvisor"
 						cam-variable-type="String" disabled>
 				</div>
@@ -107,11 +99,10 @@
 			<div class="form-group">
 				<label for="selectLoanType">Department</label>
 				<div class="controls">
-					<input  class="form-control"
-						name="departmentTutorAdditionalMember"
+					<input class="form-control" name="departmentTutorAdditionalMember"
 						cam-variable-name="departmentTutorAdditionalMember"
 						cam-variable-type="String" disabled>
-						</div>
+				</div>
 			</div>
 
 			<!-- Department-->
@@ -120,7 +111,7 @@
 				<div class="controls">
 					<input class="form-control" name="departmentVotingMember"
 						cam-variable-name="departmentVotingMember"
-						cam-variable-type="String" disabled>			
+						cam-variable-type="String" disabled>
 				</div>
 			</div>
 		</div>
@@ -137,24 +128,21 @@
 	</div>
 	<div class="row">
 		<div class="form-group">
-        <label for="inputName">Comment</label>
-        <div class="controls">
-          <input class="form-control"
-               type="text"
-               name="commentAssessmentCommittee"
-               cam-variable-name="commentAssessmentCommittee"
-               cam-variable-type="String"
-                />
-		<br><div>
-			<!-- sign form -->
-			<select required cam-variable-name="asssesmentCommitteeApproved"
-				cam-variable-type="Boolean">
-				<option value="true">Approve</option>
-				<option value="false">Disapprove</option>
-			</select> Approve Assessment Committee <br> <br>
-		</div>
-
-	</div>
+			<label for="inputName">Comment</label>
+			<div class="controls">
+				<input class="form-control" type="text"
+					name="commentAssessmentCommittee"
+					cam-variable-name="commentAssessmentCommittee"
+					cam-variable-type="String" /> <br>
+				<div>
+					<!-- sign form -->
+					<select required cam-variable-name="asssesmentCommitteeApproved"
+						cam-variable-type="Boolean">
+						<option value="true">Approve</option>
+						<option value="false">Disapprove</option>
+					</select> Approve Assessment Committee <br> <br>
+				</div>
+			</div>
 		</div>
 	</div>
 </form>

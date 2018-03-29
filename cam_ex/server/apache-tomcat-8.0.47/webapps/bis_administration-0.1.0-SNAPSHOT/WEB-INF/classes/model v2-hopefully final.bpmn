@@ -158,7 +158,7 @@ Examination committee
                 <camunda:inputParameter name="subject">Your study program is not approved</camunda:inputParameter>
                 <camunda:inputParameter name="text"><![CDATA[Dear student,
 
-Your study program is not approved because of ${commentStudyProgram}.
+Your study program is not approved with the reason: ${commentStudyProgram}.
 You can redo your study program in the BIS administration.
 
 Best regards,
@@ -345,7 +345,7 @@ ${graduationSupervisor}
                 <camunda:inputParameter name="subject">Your graduation plan is not approved</camunda:inputParameter>
                 <camunda:inputParameter name="text"><![CDATA[Dear student,
 
-Your graduation plan is not approved because of ${commentGraduationPlan}.
+Your graduation plan is not approved with the reason: ${commentGraduationPlan}.
 You can redo your study program in the BIS administration.
 
 Best regards,
@@ -522,7 +522,7 @@ Examination committee
                 <camunda:inputParameter name="subject">You are not qualified for a diploma</camunda:inputParameter>
                 <camunda:inputParameter name="text"><![CDATA[Dear student, 
 
-You are not qualified for a diploma because of ${commentDiploma}.
+You are not qualified for a diploma with the reason: ${commentDiploma}.
 You can redo your graduation in the BIS administration.
 
 Best regards,
@@ -557,7 +557,7 @@ Examination committee
             <camunda:connector>
               <camunda:inputOutput>
                 <camunda:inputParameter name="to">bisstudenttest@gmail.com</camunda:inputParameter>
-                <camunda:inputParameter name="subject">Disqualified for diploma because of unfinished course(s)</camunda:inputParameter>
+                <camunda:inputParameter name="subject">Disqualified for diploma with the reason: Unfinished Course(s)</camunda:inputParameter>
                 <camunda:inputParameter name="text"><![CDATA[Dear student, 
 
 You are not qualified for a diploma yet because you have not finished all your course(s). Please finish them as soon as possible.
