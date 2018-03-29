@@ -18,11 +18,11 @@
         <bpmn:startEvent id="StartEvent_1nr7lry">
           <bpmn:outgoing>SequenceFlow_0nqd217</bpmn:outgoing>
         </bpmn:startEvent>
-        <bpmn:userTask id="UserTask_0v7iidh" name="Fill and sign form by student" camunda:formKey="embedded:app:forms/fill-sign-studyprogram.html" camunda:assignee="Student">
+        <bpmn:userTask id="UserTask_0v7iidh" name="Fill and sign form by student" camunda:formKey="embedded:app:forms/fill-sign-studyprogram.html" camunda:assignee="${studentId}">
           <bpmn:incoming>SequenceFlow_1k7cy9v</bpmn:incoming>
           <bpmn:outgoing>SequenceFlow_1m1tbm0</bpmn:outgoing>
         </bpmn:userTask>
-        <bpmn:userTask id="UserTask_0t4yufw" name="Sign form by graduation supervisor" camunda:formKey="embedded:app:forms/sign-studyprogram.html" camunda:assignee="Graduation_Supervisor">
+        <bpmn:userTask id="UserTask_0t4yufw" name="Sign form by graduation supervisor" camunda:formKey="embedded:app:forms/sign-studyprogram.html" camunda:candidateGroups="studyprogramsupervisor">
           <bpmn:incoming>SequenceFlow_1m1tbm0</bpmn:incoming>
           <bpmn:outgoing>SequenceFlow_0a014sq</bpmn:outgoing>
         </bpmn:userTask>
@@ -165,7 +165,7 @@ Examiniation committee
           <bpmn:incoming>SequenceFlow_1ssqyvf</bpmn:incoming>
           <bpmn:outgoing>SequenceFlow_0yaxl9j</bpmn:outgoing>
         </bpmn:exclusiveGateway>
-        <bpmn:userTask id="UserTask_0l4vrx1" name="Student wants to be heard" camunda:formKey="embedded:app:forms/wants-to-be-heard.html" camunda:assignee="Student">
+        <bpmn:userTask id="UserTask_0l4vrx1" name="Student wants to be heard" camunda:formKey="embedded:app:forms/wants-to-be-heard.html" camunda:assignee="${studentId}">
           <bpmn:incoming>SequenceFlow_0wjkycf</bpmn:incoming>
           <bpmn:outgoing>SequenceFlow_0m0h9hx</bpmn:outgoing>
         </bpmn:userTask>
@@ -229,7 +229,7 @@ Examiniation committee
         <bpmn:startEvent id="StartEvent_0p3kdmt">
           <bpmn:outgoing>SequenceFlow_1hwr2va</bpmn:outgoing>
         </bpmn:startEvent>
-        <bpmn:userTask id="UserTask_0lcdruy" name="Fill and sign form graduation plan by student" camunda:formKey="embedded:app:forms/fill-sign-graduationplan.html" camunda:assignee="Student">
+        <bpmn:userTask id="UserTask_0lcdruy" name="Fill and sign form graduation plan by student" camunda:formKey="embedded:app:forms/fill-sign-graduationplan.html" camunda:assignee="${studentId}">
           <bpmn:incoming>SequenceFlow_0bazlyz</bpmn:incoming>
           <bpmn:outgoing>SequenceFlow_1i9s1zp</bpmn:outgoing>
         </bpmn:userTask>
@@ -237,7 +237,7 @@ Examiniation committee
           <bpmn:incoming>SequenceFlow_1i9s1zp</bpmn:incoming>
           <bpmn:outgoing>SequenceFlow_0nwnzmx</bpmn:outgoing>
         </bpmn:userTask>
-        <bpmn:userTask id="UserTask_0un7hzp" name="Fill, sign and submit form code of conduct" camunda:formKey="embedded:app:forms/codeofconduct.html" camunda:assignee="Student">
+        <bpmn:userTask id="UserTask_0un7hzp" name="Fill, sign and submit form code of conduct" camunda:formKey="embedded:app:forms/codeofconduct.html" camunda:assignee="${studentId}">
           <bpmn:incoming>SequenceFlow_0tw1v79</bpmn:incoming>
           <bpmn:outgoing>SequenceFlow_1libcc0</bpmn:outgoing>
         </bpmn:userTask>
@@ -808,7 +808,7 @@ Examiniation committee
         <bpmn:condition xsi:type="bpmn:tFormalExpression"><![CDATA[${qualifiedForDiploma=='0'}]]></bpmn:condition>
       </bpmn:conditionalEventDefinition>
     </bpmn:boundaryEvent>
-    <bpmn:userTask id="Task_0ju1ica" name="Stop with master" camunda:formKey="embedded:app:forms/student-stops-master.html" camunda:assignee="Student">
+    <bpmn:userTask id="Task_0ju1ica" name="Stop with master" camunda:formKey="embedded:app:forms/student-stops-master.html" camunda:assignee="${studentId}">
       <bpmn:incoming>SequenceFlow_1j7z9i5</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0wm6udm</bpmn:outgoing>
     </bpmn:userTask>
