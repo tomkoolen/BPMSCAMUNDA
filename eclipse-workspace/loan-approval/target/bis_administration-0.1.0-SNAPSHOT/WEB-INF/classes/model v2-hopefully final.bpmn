@@ -695,7 +695,7 @@ Examiniation committee
         <bpmn:outgoing>SequenceFlow_08kxgy2</bpmn:outgoing>
       </bpmn:exclusiveGateway>
       <bpmn:exclusiveGateway id="ExclusiveGateway_0buho3s" name="Already went once through check study program" default="SequenceFlow_1qep17g">
-        <bpmn:incoming>SequenceFlow_06hwndi</bpmn:incoming>
+        <bpmn:incoming>SequenceFlow_0uspmz8</bpmn:incoming>
         <bpmn:outgoing>SequenceFlow_1qep17g</bpmn:outgoing>
         <bpmn:outgoing>SequenceFlow_1kbj1qt</bpmn:outgoing>
       </bpmn:exclusiveGateway>
@@ -710,7 +710,7 @@ Examiniation committee
         <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[${StudyProgramApproved=='1' || StudyProgramApproved=='0'}]]></bpmn:conditionExpression>
       </bpmn:sequenceFlow>
       <bpmn:sequenceFlow id="SequenceFlow_0598ran" sourceRef="ExclusiveGateway_1l3pold" targetRef="SubProcess_1tofhv5" />
-      <bpmn:sequenceFlow id="SequenceFlow_0uspmz8" sourceRef="SubProcess_1tofhv5" targetRef="IntermediateThrowEvent_0fglrl3" />
+      <bpmn:sequenceFlow id="SequenceFlow_0uspmz8" sourceRef="SubProcess_1tofhv5" targetRef="ExclusiveGateway_0buho3s" />
       <bpmn:sequenceFlow id="SequenceFlow_08kxgy2" sourceRef="ExclusiveGateway_12vc1ca" targetRef="SubProcess_0ls843o" />
       <bpmn:sequenceFlow id="SequenceFlow_1ud45c8" sourceRef="SubProcess_0ls843o" targetRef="ExclusiveGateway_10xbn2y" />
       <bpmn:sequenceFlow id="SequenceFlow_05l3cpw" name="${StudyProgramApproved==&#39;2&#39;}" sourceRef="ExclusiveGateway_10xbn2y" targetRef="ExclusiveGateway_1mezqqq">
@@ -766,12 +766,6 @@ Examiniation committee
       <bpmn:sequenceFlow id="SequenceFlow_1kbj1qt" name="${StudyProgramApproved==&#39;1&#39; || StudyProgramApproved==&#39;0&#39;}" sourceRef="ExclusiveGateway_0buho3s" targetRef="ExclusiveGateway_12vc1ca">
         <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[${StudyProgramApproved=='1' || StudyProgramApproved=='0'}]]></bpmn:conditionExpression>
       </bpmn:sequenceFlow>
-      <bpmn:intermediateThrowEvent id="IntermediateThrowEvent_0fglrl3" name="Student finished master">
-        <bpmn:incoming>SequenceFlow_0uspmz8</bpmn:incoming>
-        <bpmn:outgoing>SequenceFlow_06hwndi</bpmn:outgoing>
-        <bpmn:escalationEventDefinition escalationRef="Escalation_17bdirz" />
-      </bpmn:intermediateThrowEvent>
-      <bpmn:sequenceFlow id="SequenceFlow_06hwndi" sourceRef="IntermediateThrowEvent_0fglrl3" targetRef="ExclusiveGateway_0buho3s" />
     </bpmn:subProcess>
     <bpmn:startEvent id="StartEvent_1rhphby" name="start BIS master" camunda:formKey="embedded:app:forms/startprocess.html">
       <bpmn:outgoing>SequenceFlow_18vwvvf</bpmn:outgoing>
@@ -783,7 +777,7 @@ Examiniation committee
       <bpmn:outgoing>SequenceFlow_0ki1zvj</bpmn:outgoing>
       <bpmn:outgoing>SequenceFlow_1j7z9i5</bpmn:outgoing>
     </bpmn:parallelGateway>
-    <bpmn:sequenceFlow id="SequenceFlow_1j7z9i5" sourceRef="ExclusiveGateway_0d00e36" targetRef="SubProcess_189vvhf" />
+    <bpmn:sequenceFlow id="SequenceFlow_1j7z9i5" sourceRef="ExclusiveGateway_0d00e36" targetRef="Task_0ju1ica" />
     <bpmn:boundaryEvent id="BoundaryEvent_0barbr1" name="Student stops with master" attachedToRef="SubProcess_0ozebpq">
       <bpmn:outgoing>SequenceFlow_1kj48rr</bpmn:outgoing>
       <bpmn:conditionalEventDefinition>
@@ -799,13 +793,9 @@ Examiniation committee
     <bpmn:sequenceFlow id="SequenceFlow_0h2svs0" sourceRef="ExclusiveGateway_1q2ig2c" targetRef="EndEvent_11p81m4" />
     <bpmn:parallelGateway id="ExclusiveGateway_1q2ig2c">
       <bpmn:incoming>SequenceFlow_1kj48rr</bpmn:incoming>
-      <bpmn:incoming>SequenceFlow_18iefo2</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_0wm6udm</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0h2svs0</bpmn:outgoing>
     </bpmn:parallelGateway>
-    <bpmn:boundaryEvent id="BoundaryEvent_1s09fag" name="Student finished master" attachedToRef="SubProcess_189vvhf">
-      <bpmn:outgoing>SequenceFlow_0l0iqw6</bpmn:outgoing>
-      <bpmn:escalationEventDefinition escalationRef="Escalation_17bdirz" />
-    </bpmn:boundaryEvent>
     <bpmn:sequenceFlow id="SequenceFlow_1jluhyc" sourceRef="ExclusiveGateway_11pyyep" targetRef="EndEvent_11p81m4" />
     <bpmn:sequenceFlow id="SequenceFlow_0l0iqw6" sourceRef="BoundaryEvent_1s09fag" targetRef="ExclusiveGateway_11pyyep" />
     <bpmn:parallelGateway id="ExclusiveGateway_11pyyep">
@@ -813,23 +803,17 @@ Examiniation committee
       <bpmn:incoming>SequenceFlow_0l0iqw6</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1jluhyc</bpmn:outgoing>
     </bpmn:parallelGateway>
-    <bpmn:subProcess id="SubProcess_189vvhf" name="Sub stop master">
+    <bpmn:boundaryEvent id="BoundaryEvent_1s09fag" name="Student finished master" attachedToRef="Task_0ju1ica">
+      <bpmn:outgoing>SequenceFlow_0l0iqw6</bpmn:outgoing>
+      <bpmn:conditionalEventDefinition>
+        <bpmn:condition xsi:type="bpmn:tFormalExpression"><![CDATA[${qualifiedForDiploma=='0'}]]></bpmn:condition>
+      </bpmn:conditionalEventDefinition>
+    </bpmn:boundaryEvent>
+    <bpmn:userTask id="Task_0ju1ica" name="Stop with master" camunda:formKey="embedded:app:forms/student-stops-master.html" camunda:assignee="Student">
       <bpmn:incoming>SequenceFlow_1j7z9i5</bpmn:incoming>
-      <bpmn:outgoing>SequenceFlow_18iefo2</bpmn:outgoing>
-      <bpmn:userTask id="Task_0ju1ica" name="Stop with master" camunda:formKey="embedded:app:forms/student-stops-master.html" camunda:assignee="Student">
-        <bpmn:incoming>SequenceFlow_1o6a6xv</bpmn:incoming>
-        <bpmn:outgoing>SequenceFlow_1shzaa6</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:startEvent id="StartEvent_1beh094">
-        <bpmn:outgoing>SequenceFlow_1o6a6xv</bpmn:outgoing>
-      </bpmn:startEvent>
-      <bpmn:sequenceFlow id="SequenceFlow_1o6a6xv" sourceRef="StartEvent_1beh094" targetRef="Task_0ju1ica" />
-      <bpmn:endEvent id="EndEvent_1i994v1">
-        <bpmn:incoming>SequenceFlow_1shzaa6</bpmn:incoming>
-      </bpmn:endEvent>
-      <bpmn:sequenceFlow id="SequenceFlow_1shzaa6" sourceRef="Task_0ju1ica" targetRef="EndEvent_1i994v1" />
-    </bpmn:subProcess>
-    <bpmn:sequenceFlow id="SequenceFlow_18iefo2" sourceRef="SubProcess_189vvhf" targetRef="ExclusiveGateway_1q2ig2c" />
+      <bpmn:outgoing>SequenceFlow_0wm6udm</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="SequenceFlow_0wm6udm" sourceRef="Task_0ju1ica" targetRef="ExclusiveGateway_1q2ig2c" />
   </bpmn:process>
   <bpmn:message id="Message_0d92oba" />
   <bpmn:escalation id="Escalation_17bdirz" name="finishedMaster" escalationCode="STUDENT-FINISHED-MASTER" />
@@ -1019,9 +1003,9 @@ Examiniation committee
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="SequenceFlow_0uspmz8_di" bpmnElement="SequenceFlow_0uspmz8">
         <di:waypoint xsi:type="dc:Point" x="1805" y="1053" />
-        <di:waypoint xsi:type="dc:Point" x="1836" y="1053" />
+        <di:waypoint xsi:type="dc:Point" x="1892" y="1053" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1776" y="1032" width="90" height="12" />
+          <dc:Bounds x="1804" y="1032" width="90" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="SequenceFlow_08kxgy2_di" bpmnElement="SequenceFlow_08kxgy2">
@@ -2088,7 +2072,7 @@ Examiniation committee
       <bpmndi:BPMNEdge id="SequenceFlow_1j7z9i5_di" bpmnElement="SequenceFlow_1j7z9i5">
         <di:waypoint xsi:type="dc:Point" x="554" y="1284" />
         <di:waypoint xsi:type="dc:Point" x="554" y="2310" />
-        <di:waypoint xsi:type="dc:Point" x="7306" y="2311" />
+        <di:waypoint xsi:type="dc:Point" x="7091" y="2311" />
         <bpmndi:BPMNLabel>
           <dc:Bounds x="524" y="1791" width="90" height="12" />
         </bpmndi:BPMNLabel>
@@ -2120,7 +2104,7 @@ Examiniation committee
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="UserTask_1c74985_di" bpmnElement="Task_0ju1ica">
-        <dc:Bounds x="7425" y="2271" width="100" height="80" />
+        <dc:Bounds x="7091" y="2271" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="SequenceFlow_0h2svs0_di" bpmnElement="SequenceFlow_0h2svs0">
         <di:waypoint xsi:type="dc:Point" x="8211" y="1463" />
@@ -2136,18 +2120,6 @@ Examiniation committee
           <dc:Bounds x="8185.626016260163" y="1492" width="0" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="IntermediateThrowEvent_1c1f3ff_di" bpmnElement="IntermediateThrowEvent_0fglrl3">
-        <dc:Bounds x="1836" y="1035" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="1816" y="1075" width="77" height="24" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BoundaryEvent_1wzn51l_di" bpmnElement="BoundaryEvent_1s09fag">
-        <dc:Bounds x="7463" y="2193" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="7442" y="2155" width="77" height="24" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="SequenceFlow_1jluhyc_di" bpmnElement="SequenceFlow_1jluhyc">
         <di:waypoint xsi:type="dc:Point" x="8062" y="1259" />
         <di:waypoint xsi:type="dc:Point" x="8232" y="1259" />
@@ -2156,11 +2128,12 @@ Examiniation committee
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="SequenceFlow_0l0iqw6_di" bpmnElement="SequenceFlow_0l0iqw6">
-        <di:waypoint xsi:type="dc:Point" x="7499" y="2210" />
+        <di:waypoint xsi:type="dc:Point" x="7154" y="2253" />
+        <di:waypoint xsi:type="dc:Point" x="7154" y="2143" />
         <di:waypoint xsi:type="dc:Point" x="8036" y="2143" />
         <di:waypoint xsi:type="dc:Point" x="8036" y="1283" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="7722.5" y="2155.5" width="90" height="12" />
+          <dc:Bounds x="7550" y="2122" width="90" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="ParallelGateway_19bd1zk_di" bpmnElement="ExclusiveGateway_11pyyep">
@@ -2169,48 +2142,18 @@ Examiniation committee
           <dc:Bounds x="8036.063683304647" y="1288" width="0" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="SequenceFlow_06hwndi_di" bpmnElement="SequenceFlow_06hwndi">
-        <di:waypoint xsi:type="dc:Point" x="1872" y="1053" />
-        <di:waypoint xsi:type="dc:Point" x="1892" y="1053" />
+      <bpmndi:BPMNShape id="BoundaryEvent_0pi0qkl_di" bpmnElement="BoundaryEvent_1s09fag">
+        <dc:Bounds x="7136" y="2253" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1837" y="1032" width="90" height="12" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="SubProcess_189vvhf_di" bpmnElement="SubProcess_189vvhf" isExpanded="true">
-        <dc:Bounds x="7306.294" y="2210.62" width="350" height="200" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="StartEvent_1beh094_di" bpmnElement="StartEvent_1beh094">
-        <dc:Bounds x="7334.294" y="2293" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="7352.294" y="2333" width="0" height="12" />
+          <dc:Bounds x="7053" y="2191" width="77" height="24" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="SequenceFlow_1o6a6xv_di" bpmnElement="SequenceFlow_1o6a6xv">
-        <di:waypoint xsi:type="dc:Point" x="7370" y="2311" />
-        <di:waypoint xsi:type="dc:Point" x="7425" y="2311" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="7397.5" y="2290" width="0" height="12" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="EndEvent_1i994v1_di" bpmnElement="EndEvent_1i994v1">
-        <dc:Bounds x="7597.294" y="2293" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="7615.294" y="2333" width="0" height="12" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="SequenceFlow_1shzaa6_di" bpmnElement="SequenceFlow_1shzaa6">
-        <di:waypoint xsi:type="dc:Point" x="7525" y="2311" />
-        <di:waypoint xsi:type="dc:Point" x="7597" y="2311" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="7561" y="2290" width="0" height="12" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="SequenceFlow_18iefo2_di" bpmnElement="SequenceFlow_18iefo2">
-        <di:waypoint xsi:type="dc:Point" x="7656" y="2311" />
+      <bpmndi:BPMNEdge id="SequenceFlow_0wm6udm_di" bpmnElement="SequenceFlow_0wm6udm">
+        <di:waypoint xsi:type="dc:Point" x="7191" y="2311" />
         <di:waypoint xsi:type="dc:Point" x="8186" y="2311" />
         <di:waypoint xsi:type="dc:Point" x="8186" y="1488" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="7921" y="2290" width="0" height="12" />
+          <dc:Bounds x="7688.5" y="2290" width="0" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>

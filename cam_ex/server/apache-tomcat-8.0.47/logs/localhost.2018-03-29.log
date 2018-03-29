@@ -118,3 +118,5 @@ Caused by: org.camunda.bpm.engine.ProcessEngineException: ENGINE-09005 Could not
 	at org.camunda.bpm.container.impl.spi.DeploymentOperation.execute(DeploymentOperation.java:116)
 	... 18 more
 
+29-Mar-2018 11:05:53.494 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+29-Mar-2018 11:05:53.494 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
