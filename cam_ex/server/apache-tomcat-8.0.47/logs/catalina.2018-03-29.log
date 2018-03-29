@@ -6607,3 +6607,163 @@ Deployment does not provide any case definitions.
 29-Mar-2018 13:25:09.312 INFO [localhost-startStop-3] org.camunda.commons.logging.BaseLogger.logInfo SPIN-01009 Discovered Spin data format: org.camunda.spin.impl.json.jackson.format.JacksonJsonDataFormat[name = application/json]
 29-Mar-2018 13:25:09.313 INFO [localhost-startStop-3] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08050 Process application Loan Approval App successfully deployed
 29-Mar-2018 13:25:09.317 INFO [localhost-startStop-3] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive C:\Users\s124182\Documents\GitHub\BPMSCAMUNDA\cam_ex\server\apache-tomcat-8.0.47\webapps\bis_administration-0.1.0-SNAPSHOT.war has finished in 3,576 ms
+29-Mar-2018 14:09:51.711 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/bis_administration-0.1.0-SNAPSHOT]
+29-Mar-2018 14:09:51.724 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08051 Process application Loan Approval App undeployed
+29-Mar-2018 14:10:01.752 INFO [localhost-startStop-4] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive C:\Users\s124182\Documents\GitHub\BPMSCAMUNDA\cam_ex\server\apache-tomcat-8.0.47\webapps\bis_administration-0.1.0-SNAPSHOT.war
+29-Mar-2018 14:10:05.202 INFO [localhost-startStop-4] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-07015 Detected @ProcessApplication class 'org.camunda.bpm.getstarted.loanapproval.LoanApprovalApplication'
+29-Mar-2018 14:10:05.242 INFO [localhost-startStop-4] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08024 Found processes.xml file at file:/C:/Users/s124182/Documents/GitHub/BPMSCAMUNDA/cam_ex/server/apache-tomcat-8.0.47/webapps/bis_administration-0.1.0-SNAPSHOT/WEB-INF/classes/META-INF/processes.xml
+29-Mar-2018 14:10:05.253 INFO [localhost-startStop-4] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08023 Deployment summary for process archive 'loan-approval': 
+
+        model v2-hopefully final.bpmn
+
+29-Mar-2018 14:10:05.348 INFO [localhost-startStop-4] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-07021 ProcessApplication 'Loan Approval App' registered for DB deployments [7f3afd84-332c-11e8-804a-b4b52f30bdbf, 9a37bed8-3196-11e8-9975-b4b52f30bdbf, 5e0abb0b-3289-11e8-b534-d4c9ef522b2a, 7b6952c9-3281-11e8-98a4-d4c9ef522b2a, 2fecaf5d-332f-11e8-804a-b4b52f30bdbf, 086d7280-31a7-11e8-9fe3-d4c9ef522b2a, e21d5551-31a8-11e8-89fa-d4c9ef522b2a, f15d44e4-3328-11e8-804a-b4b52f30bdbf, 477d2607-31ac-11e8-89fa-d4c9ef522b2a, bde70192-32e6-11e8-a1b0-b4b52f30bdbf, 5bbdf865-3340-11e8-891a-b4b52f30bdbf, 1da21d2f-334a-11e8-891a-b4b52f30bdbf, a9aee5a0-3289-11e8-b534-d4c9ef522b2a, a3159864-31d0-11e8-b335-d4c9ef522b2a, 0b340349-3284-11e8-98a4-d4c9ef522b2a, 6bcc7fc8-32df-11e8-a1b0-b4b52f30bdbf, d8b7eceb-3071-11e8-b074-b4b52f30bdbf, ca526da6-32e1-11e8-a1b0-b4b52f30bdbf, ca56371a-32e4-11e8-a1b0-b4b52f30bdbf, a34f6871-32e5-11e8-a1b0-b4b52f30bdbf, 5407e36e-3330-11e8-893d-b4b52f30bdbf, d6adcd4e-3343-11e8-891a-b4b52f30bdbf, 0aa8cee0-332d-11e8-804a-b4b52f30bdbf, 5c0b16a0-332f-11e8-804a-b4b52f30bdbf, 90757a3d-3284-11e8-98a4-d4c9ef522b2a, fc21c912-3282-11e8-98a4-d4c9ef522b2a]. Will execute process definitions 
+
+        bis_administration[version: 19, id: bis_administration:19:7f3e58e6-332c-11e8-804a-b4b52f30bdbf]
+        bis_administration[version: 2, id: bis_administration:2:9a530f0a-3196-11e8-9975-b4b52f30bdbf]
+        bis_administration[version: 11, id: bis_administration:11:5e0d04fd-3289-11e8-b534-d4c9ef522b2a]
+        bis_administration[version: 7, id: bis_administration:7:7b8231fb-3281-11e8-98a4-d4c9ef522b2a]
+        bis_administration[version: 21, id: bis_administration:21:2ff0f51f-332f-11e8-804a-b4b52f30bdbf]
+        bis_administration[version: 3, id: bis_administration:3:08738d02-31a7-11e8-9fe3-d4c9ef522b2a]
+        bis_administration[version: 4, id: bis_administration:4:e2201473-31a8-11e8-89fa-d4c9ef522b2a]
+        bis_administration[version: 18, id: bis_administration:18:f180d276-3328-11e8-804a-b4b52f30bdbf]
+        bis_administration[version: 5, id: bis_administration:5:477fe529-31ac-11e8-89fa-d4c9ef522b2a]
+        bis_administration[version: 17, id: bis_administration:17:bdeaf934-32e6-11e8-a1b0-b4b52f30bdbf]
+        bis_administration[version: 24, id: bis_administration:24:5bc376a7-3340-11e8-891a-b4b52f30bdbf]
+        bis_administration[version: 26, id: bis_administration:26:1daf8ab1-334a-11e8-891a-b4b52f30bdbf]
+        bis_administration[version: 12, id: bis_administration:12:a9b0e172-3289-11e8-b534-d4c9ef522b2a]
+        bis_administration[version: 6, id: bis_administration:6:a3185786-31d0-11e8-b335-d4c9ef522b2a]
+        bis_administration[version: 9, id: bis_administration:9:0b36c26b-3284-11e8-98a4-d4c9ef522b2a]
+        bis_administration[version: 13, id: bis_administration:13:6be97daa-32df-11e8-a1b0-b4b52f30bdbf]
+        bis_administration[version: 1, id: bis_administration:1:d8ba0fcd-3071-11e8-b074-b4b52f30bdbf]
+        bis_administration[version: 14, id: bis_administration:14:ca570188-32e1-11e8-a1b0-b4b52f30bdbf]
+        bis_administration[version: 15, id: bis_administration:15:ca5aa3ec-32e4-11e8-a1b0-b4b52f30bdbf]
+        bis_administration[version: 16, id: bis_administration:16:a352eae3-32e5-11e8-a1b0-b4b52f30bdbf]
+        bis_administration[version: 23, id: bis_administration:23:54290000-3330-11e8-893d-b4b52f30bdbf]
+        bis_administration[version: 25, id: bis_administration:25:d6b6ce00-3343-11e8-891a-b4b52f30bdbf]
+        bis_administration[version: 20, id: bis_administration:20:0aabdc22-332d-11e8-804a-b4b52f30bdbf]
+        bis_administration[version: 22, id: bis_administration:22:5c0e23e2-332f-11e8-804a-b4b52f30bdbf]
+        bis_administration[version: 10, id: bis_administration:10:90794acf-3284-11e8-98a4-d4c9ef522b2a]
+        bis_administration[version: 8, id: bis_administration:8:fc24fd64-3282-11e8-98a4-d4c9ef522b2a]
+Deployment does not provide any case definitions.
+29-Mar-2018 14:10:05.357 INFO [localhost-startStop-4] org.camunda.commons.logging.BaseLogger.logInfo SPIN-01010 Discovered Spin data format provider: org.camunda.spin.impl.json.jackson.format.JacksonJsonDataFormatProvider[name = application/json]
+29-Mar-2018 14:10:05.360 INFO [localhost-startStop-4] org.camunda.commons.logging.BaseLogger.logInfo SPIN-01010 Discovered Spin data format provider: org.camunda.spin.impl.xml.dom.format.DomXmlDataFormatProvider[name = application/xml]
+29-Mar-2018 14:10:05.366 INFO [localhost-startStop-4] org.camunda.commons.logging.BaseLogger.logInfo SPIN-01009 Discovered Spin data format: org.camunda.spin.impl.xml.dom.format.DomXmlDataFormat[name = application/xml]
+29-Mar-2018 14:10:05.366 INFO [localhost-startStop-4] org.camunda.commons.logging.BaseLogger.logInfo SPIN-01009 Discovered Spin data format: org.camunda.spin.impl.json.jackson.format.JacksonJsonDataFormat[name = application/json]
+29-Mar-2018 14:10:05.366 INFO [localhost-startStop-4] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08050 Process application Loan Approval App successfully deployed
+29-Mar-2018 14:10:05.371 INFO [localhost-startStop-4] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive C:\Users\s124182\Documents\GitHub\BPMSCAMUNDA\cam_ex\server\apache-tomcat-8.0.47\webapps\bis_administration-0.1.0-SNAPSHOT.war has finished in 3,619 ms
+29-Mar-2018 14:29:18.584 WARNING [http-nio-8080-exec-41] org.camunda.bpm.engine.rest.exception.RestExceptionHandler.toResponse org.camunda.bpm.engine.rest.exception.InvalidRequestException: No matching task with id 5d7a6a20-334a-11e8-891a-b4b52f30bdbf
+	at org.camunda.bpm.engine.rest.sub.task.impl.TaskResourceImpl.getHalTask(TaskResourceImpl.java:162)
+	at org.camunda.bpm.engine.rest.sub.task.impl.TaskResourceImpl.getTask(TaskResourceImpl.java:144)
+	at sun.reflect.GeneratedMethodAccessor466.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:167)
+	at org.jboss.resteasy.core.ResourceMethod.invokeOnTarget(ResourceMethod.java:257)
+	at org.jboss.resteasy.core.ResourceMethod.invoke(ResourceMethod.java:222)
+	at org.jboss.resteasy.core.ResourceLocator.invokeOnTargetObject(ResourceLocator.java:159)
+	at org.jboss.resteasy.core.ResourceLocator.invoke(ResourceLocator.java:107)
+	at org.jboss.resteasy.core.ResourceLocator.invokeOnTargetObject(ResourceLocator.java:154)
+	at org.jboss.resteasy.core.ResourceLocator.invoke(ResourceLocator.java:92)
+	at org.jboss.resteasy.core.SynchronousDispatcher.getResponse(SynchronousDispatcher.java:542)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:524)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:126)
+	at org.jboss.resteasy.plugins.server.servlet.ServletContainerDispatcher.service(ServletContainerDispatcher.java:208)
+	at org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:55)
+	at org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:50)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:292)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.camunda.bpm.engine.rest.filter.CacheControlFilter.doFilter(CacheControlFilter.java:41)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.camunda.bpm.engine.rest.filter.EmptyBodyFilter.doFilter(EmptyBodyFilter.java:97)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.camunda.bpm.webapp.impl.security.filter.SecurityFilter.doFilterSecure(SecurityFilter.java:67)
+	at org.camunda.bpm.webapp.impl.security.filter.SecurityFilter.doFilter(SecurityFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.camunda.bpm.webapp.impl.security.auth.AuthenticationFilter$1.execute(AuthenticationFilter.java:58)
+	at org.camunda.bpm.webapp.impl.security.auth.AuthenticationFilter$1.execute(AuthenticationFilter.java:56)
+	at org.camunda.bpm.webapp.impl.security.SecurityActions.runWithAuthentications(SecurityActions.java:40)
+	at org.camunda.bpm.webapp.impl.security.auth.AuthenticationFilter.doFilter(AuthenticationFilter.java:56)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:94)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:504)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:620)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:502)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1132)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:684)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1539)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1495)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+29-Mar-2018 14:31:21.623 WARNING [http-nio-8080-exec-43] org.camunda.bpm.engine.rest.exception.RestExceptionHandler.toResponse org.camunda.bpm.engine.rest.exception.InvalidRequestException: No matching task with id 5d7a6a20-334a-11e8-891a-b4b52f30bdbf
+	at org.camunda.bpm.engine.rest.sub.task.impl.TaskResourceImpl.getHalTask(TaskResourceImpl.java:162)
+	at org.camunda.bpm.engine.rest.sub.task.impl.TaskResourceImpl.getTask(TaskResourceImpl.java:144)
+	at sun.reflect.GeneratedMethodAccessor466.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:167)
+	at org.jboss.resteasy.core.ResourceMethod.invokeOnTarget(ResourceMethod.java:257)
+	at org.jboss.resteasy.core.ResourceMethod.invoke(ResourceMethod.java:222)
+	at org.jboss.resteasy.core.ResourceLocator.invokeOnTargetObject(ResourceLocator.java:159)
+	at org.jboss.resteasy.core.ResourceLocator.invoke(ResourceLocator.java:107)
+	at org.jboss.resteasy.core.ResourceLocator.invokeOnTargetObject(ResourceLocator.java:154)
+	at org.jboss.resteasy.core.ResourceLocator.invoke(ResourceLocator.java:92)
+	at org.jboss.resteasy.core.SynchronousDispatcher.getResponse(SynchronousDispatcher.java:542)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:524)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:126)
+	at org.jboss.resteasy.plugins.server.servlet.ServletContainerDispatcher.service(ServletContainerDispatcher.java:208)
+	at org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:55)
+	at org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:50)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:292)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.camunda.bpm.engine.rest.filter.CacheControlFilter.doFilter(CacheControlFilter.java:41)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.camunda.bpm.engine.rest.filter.EmptyBodyFilter.doFilter(EmptyBodyFilter.java:97)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.camunda.bpm.webapp.impl.security.filter.SecurityFilter.doFilterSecure(SecurityFilter.java:67)
+	at org.camunda.bpm.webapp.impl.security.filter.SecurityFilter.doFilter(SecurityFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.camunda.bpm.webapp.impl.security.auth.AuthenticationFilter$1.execute(AuthenticationFilter.java:58)
+	at org.camunda.bpm.webapp.impl.security.auth.AuthenticationFilter$1.execute(AuthenticationFilter.java:56)
+	at org.camunda.bpm.webapp.impl.security.SecurityActions.runWithAuthentications(SecurityActions.java:40)
+	at org.camunda.bpm.webapp.impl.security.auth.AuthenticationFilter.doFilter(AuthenticationFilter.java:56)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:94)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:504)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:620)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:502)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1132)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:684)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1539)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1495)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+

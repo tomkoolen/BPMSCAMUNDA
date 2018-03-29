@@ -49,6 +49,7 @@
 
 I'm sorry to let you know that I did not approve your study program. I left these comments:
 ${commentStudyProgram}.
+You can redo your study program in the BIS administration.
 
 Kind regards,
 ${graduationSupervisor}
@@ -115,7 +116,13 @@ ${graduationSupervisor}
               <camunda:inputOutput>
                 <camunda:inputParameter name="to">bisstudenttest@gmail.com</camunda:inputParameter>
                 <camunda:inputParameter name="subject">Possibility to be heard for rejected study program</camunda:inputParameter>
-                <camunda:inputParameter name="text">You can be heard for your rejected study program, please send an email within 2 weeks to</camunda:inputParameter>
+                <camunda:inputParameter name="text"><![CDATA[Dear student,
+
+You can be heard for your rejected study program, please confirm within 2 weeks on the BIS administration whether or not you want this.
+Best regards,
+
+Examination Committee
+]]></camunda:inputParameter>
               </camunda:inputOutput>
               <camunda:connectorId>mail-send</camunda:connectorId>
             </camunda:connector>
@@ -130,7 +137,9 @@ ${graduationSupervisor}
                 <camunda:inputParameter name="to">bisstudenttest@gmail.com</camunda:inputParameter>
                 <camunda:inputParameter name="subject">Your study program is approved</camunda:inputParameter>
                 <camunda:inputParameter name="text"><![CDATA[Dear student, 
+
 Your study program is approved.
+
 Best regards,
 Examination committee
 ]]></camunda:inputParameter>
@@ -148,7 +157,10 @@ Examination committee
                 <camunda:inputParameter name="to">bisstudenttest@gmail.com</camunda:inputParameter>
                 <camunda:inputParameter name="subject">Your study program is not approved</camunda:inputParameter>
                 <camunda:inputParameter name="text"><![CDATA[Dear student,
-Your study program is not approved because of XYZ.
+
+Your study program is not approved because of ${commentStudyProgram}.
+You can redo your study program in the BIS administration.
+
 Best regards,
 Examiniation committee
 ]]></camunda:inputParameter>
@@ -274,6 +286,7 @@ Examiniation committee
 
 I'm sorry to let you know that I did not approve your graduation plan. I left these comments:
 ${commentGraduationPlan}.
+You can redo your study program in the BIS administration.
 
 Kind regards,
 ${graduationSupervisor}
@@ -331,7 +344,10 @@ ${graduationSupervisor}
                 <camunda:inputParameter name="to">bisstudenttest@gmail.com</camunda:inputParameter>
                 <camunda:inputParameter name="subject">Your graduation plan is not approved</camunda:inputParameter>
                 <camunda:inputParameter name="text"><![CDATA[Dear student,
-Your graduation plan is not approved because of XYZ.
+
+Your graduation plan is not approved because of ${commentGraduationPlan}.
+You can redo your study program in the BIS administration.
+
 Best regards,
 Examiniation committee
 ]]></camunda:inputParameter>
@@ -349,7 +365,9 @@ Examiniation committee
                 <camunda:inputParameter name="to">bisstudenttest@gmail.com</camunda:inputParameter>
                 <camunda:inputParameter name="subject">Your graduation plan is approved</camunda:inputParameter>
                 <camunda:inputParameter name="text"><![CDATA[Dear student, 
+
 Your graduation plan is approved.
+
 Best regards,
 Examination committee
 ]]></camunda:inputParameter>
@@ -431,9 +449,11 @@ Examination committee
                 <camunda:inputParameter name="to">bisstudenttest@gmail.com</camunda:inputParameter>
                 <camunda:inputParameter name="subject">Assesment committee form signed</camunda:inputParameter>
                 <camunda:inputParameter name="text"><![CDATA[Dear student, 
+
 The assesment committee form is signed by your supervisor.
+
 Best regards,
-Examination committee
+Examination Committee
 ]]></camunda:inputParameter>
               </camunda:inputOutput>
               <camunda:connectorId>mail-send</camunda:connectorId>
@@ -481,7 +501,9 @@ Examination committee
                 <camunda:inputParameter name="to">bisstudenttest@gmail.com</camunda:inputParameter>
                 <camunda:inputParameter name="subject">You have graduated</camunda:inputParameter>
                 <camunda:inputParameter name="text"><![CDATA[Dear student, 
+
 Congratulations, you have graduated.
+
 Best regards,
 Examination committee
 ]]></camunda:inputParameter>
@@ -499,7 +521,10 @@ Examination committee
                 <camunda:inputParameter name="to">bisstudenttest@gmail.com</camunda:inputParameter>
                 <camunda:inputParameter name="subject">You are not qualified for a diploma</camunda:inputParameter>
                 <camunda:inputParameter name="text"><![CDATA[Dear student, 
-You are not qualified for a diploma because of XYZ.
+
+You are not qualified for a diploma because of ${commentDiploma}.
+You can redo your graduation in the BIS administration.
+
 Best regards,
 Examination committee
 ]]></camunda:inputParameter>
@@ -534,7 +559,9 @@ Examination committee
                 <camunda:inputParameter name="to">bisstudenttest@gmail.com</camunda:inputParameter>
                 <camunda:inputParameter name="subject">Disqualified for diploma because of unfinished course(s)</camunda:inputParameter>
                 <camunda:inputParameter name="text"><![CDATA[Dear student, 
+
 You are not qualified for a diploma yet because you have not finished all your course(s). Please finish them as soon as possible.
+
 Best regards,
 Examination committee
 ]]></camunda:inputParameter>
@@ -576,9 +603,11 @@ Examination committee
           <camunda:connector>
             <camunda:inputOutput>
               <camunda:inputParameter name="to">bisstudenttest@gmail.com</camunda:inputParameter>
-              <camunda:inputParameter name="subject">More than 9 months of graduation</camunda:inputParameter>
+              <camunda:inputParameter name="subject">Your graduation took more than 9 months</camunda:inputParameter>
               <camunda:inputParameter name="text"><![CDATA[Dear student, 
-Your graduation took more than 9 months, please start again.
+
+Your graduation took more than 9 months, please restart your graduation in the BIS administration.
+
 Best regards,
 Examination committee
 ]]></camunda:inputParameter>
@@ -596,7 +625,9 @@ Examination committee
               <camunda:inputParameter name="to">bisstudenttest@gmail.com</camunda:inputParameter>
               <camunda:inputParameter name="subject">Diploma</camunda:inputParameter>
               <camunda:inputParameter name="text"><![CDATA[Dear student, 
+
 Here is your diploma.
+
 Best regards,
 Examination committee
 ]]></camunda:inputParameter>
@@ -650,7 +681,10 @@ Examination committee
               <camunda:inputParameter name="to">bisstudenttest@gmail.com</camunda:inputParameter>
               <camunda:inputParameter name="subject">Your graduation plan approval is retracted</camunda:inputParameter>
               <camunda:inputParameter name="text"><![CDATA[Dear student,
+
 Your graduation plan approval is retracted because you did not pass your remaining examinations.
+You can redo your graduation plan in the BIS administration.
+
 Best regards,
 Examiniation committee
 ]]></camunda:inputParameter>
@@ -808,7 +842,7 @@ Examiniation committee
         <bpmn:condition xsi:type="bpmn:tFormalExpression"><![CDATA[${qualifiedForDiploma=='0'}]]></bpmn:condition>
       </bpmn:conditionalEventDefinition>
     </bpmn:boundaryEvent>
-    <bpmn:userTask id="Task_0ju1ica" name="Stop with master" camunda:formKey="embedded:app:forms/student-stops-master.html" camunda:assignee="${studentId}">
+    <bpmn:userTask id="Task_0ju1ica" name="Stop with master" camunda:formKey="embedded:app:forms/student-stops-master.html" camunda:assignee="${studentId}" camunda:priority="10">
       <bpmn:incoming>SequenceFlow_1j7z9i5</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0wm6udm</bpmn:outgoing>
     </bpmn:userTask>
